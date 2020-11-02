@@ -14,8 +14,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/idoflu.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/idoflu/2020update/idoflu.owl"/>
-        <obo:IAO_0000232>Add other subclasses of Trans pathogen transmission.</obo:IAO_0000232>
-        <obo:IAO_0000232>I am having trouble figuring out what to do with the &apos;data about a GenBank entry&apos; classes. What was the reference point for these classes? I tried looking through the GenBank website, but didn&apos;t have much luck yet. -SB [10/26/2020]</obo:IAO_0000232>
+        <obo:IAO_0000232>I am having trouble figuring out what to do with some of the &apos;data about a GenBank entry&apos; classes.  -SB [10/26/2020]</obo:IAO_0000232>
         <dc:contributor xml:lang="en">Alan Ruttenberg</dc:contributor>
         <dc:contributor xml:lang="en">Barry Smith</dc:contributor>
         <dc:contributor>John Beverley</dc:contributor>
@@ -30,7 +29,6 @@
         <dc:creator>Ryan Brinkman</dc:creator>
         <dc:creator xml:lang="en">Timothy Lebo</dc:creator>
         <dc:description xml:lang="en">The influenza ontology is an application ontology that covers the natural, experimental and clinical realms related to influenza virus life cycle, infection and disease. It is an extension of the infectious disease ontology (IDO).</dc:description>
-        <rdfs:comment>Many terms include editor&apos;s notes, curator notes and comments that may eventually be removed. -SB</rdfs:comment>
         <rdfs:comment>There are many classes in IDOFLU representing avian life stages and features of avian development, such as molting. These terms are here because there is not at present a good home for them in an existing ontology. Furthermore, the definitions provided are a work in progress. Classification in birding according to plumage appears to involve elements that are partially conventional and observer relative (particularly classifications of bird stages according to at which point in the calendar year a bird was born). This raises obvious issues. -SB</rdfs:comment>
     </owl:Ontology>
     
@@ -2363,6 +2361,28 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000171 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000171">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000318"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36044"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>A treatment with an antiviral drug.</obo:IAO_0000115>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/apollo-sv.owl</obo:IAO_0000412>
+        <obo:IAO_0000600>A treatment of a particular host with a particular antiviral drug with activity against a particular viral pathogen.</obo:IAO_0000600>
+        <rdfs:label>antiviral treatment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000174 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000174">
@@ -2403,6 +2423,29 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000115>Infectious disease control strategy that has a vector control action specification as part.</obo:IAO_0000115>
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/apollo-sv.owl</obo:IAO_0000412>
         <rdfs:label xml:lang="en">vector control strategy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/APOLLO_SV_00000318 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000318">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000090"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000005"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>A treatment with a drug product.</obo:IAO_0000115>
+        <obo:IAO_0000117>William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/apollo-sv.owl</obo:IAO_0000412>
+        <obo:IAO_0000600>Treatment with a drug.</obo:IAO_0000600>
+        <rdfs:label>drug treatment</rdfs:label>
     </owl:Class>
     
 
@@ -2597,6 +2640,24 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/126-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/008-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/011-002"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
         <owl:annotatedTarget xml:lang="en">Continuant doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. For example, in an expansion involving bringing in some of Ceuster&apos;s other portions of reality, questions are raised as to whether universals are continuants</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/0000007"/>
@@ -2631,24 +2692,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <owl:annotatedTarget>(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] </owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/009-002"/>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/126-001"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/008-002"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x) (if (Material Entity x) (exists (t) (and (TemporalRegion t) (existsAt x t))))) // axiom label in BFO2 CLIF: [011-002] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/011-002"/>
-    </owl:Axiom>
     
 
 
@@ -2679,24 +2722,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
-        <owl:annotatedTarget xml:lang="en">b is an occurrent entity iff b is an entity that has temporal parts. (axiom label in BFO2 Reference: [079-001])</owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/079-001"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/108-001"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/079-001"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
         <owl:annotatedTarget xml:lang="en">Occurrent doesn&apos;t have a closure axiom because the subclasses don&apos;t necessarily exhaust all possibilites. An example would be the sum of a process and the process boundary of another process.</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/0000006"/>
@@ -2719,6 +2744,24 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
         <owl:annotatedTarget xml:lang="en">Every occurrent occupies_spatiotemporal_region some spatiotemporal region. (axiom label in BFO2 Reference: [108-001])</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/108-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000601"/>
+        <owl:annotatedTarget xml:lang="en">b is an occurrent entity iff b is an entity that has temporal parts. (axiom label in BFO2 Reference: [079-001])</owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/079-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (Occurrent x) (exists (r) (and (SpatioTemporalRegion r) (occupiesSpatioTemporalRegion x r))))) // axiom label in BFO2 CLIF: [108-001] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/108-001"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (iff (Occurrent x) (and (Entity x) (exists (y) (temporalPartOf y x))))) // axiom label in BFO2 CLIF: [079-001] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/079-001"/>
     </owl:Axiom>
     
 
@@ -4139,17 +4182,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CHEBI_36080 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36080">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33839"/>
-        <obo:IAO_0000115>Biological macromolecule consisting of one polypeptide chain synthesized at the ribosome.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/chebi.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">protein</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/CHEBI_4705 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_4705">
@@ -4225,6 +4257,19 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000117>JSmith</obo:IAO_0000117>
         <obo:IAO_0000117>http://purl.obolibrary.org/obo/cmo.owl</obo:IAO_0000117>
         <rdfs:label>antibody titer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DRON_00000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DRON_00000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <obo:IAO_0000115>A material entity (1) containing at least one scattered molecular aggregate as part (the active ingredient) and (2) that is the bearer of a clinical drug role</obo:IAO_0000115>
+        <obo:IAO_0000117>William Hogan</obo:IAO_0000117>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/dron.owl</obo:IAO_0000412>
+        <oboInOwl:created_by>William Hogan</oboInOwl:created_by>
+        <rdfs:label>drug product</rdfs:label>
     </owl:Class>
     
 
@@ -4479,10 +4524,13 @@ organization
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 xml:lang="en">Influenza and parainfluenza viruses do not ordinarily induce CPE, however they possess haemagglutinins and thus the ability to absorb guinea pig RBCs as they bud from the cell. This phenomenon is known as haemadsorption. Commonly employed cell cultures include primary monkey kidney, LLC-MK2 and MDCK cells. The cell cultures are incubated with a suspension of guinea pig RBCs at 4oC or RT for 30 minutes. The unabsorbed RBCs are then removed and the cell sheet observed microscopically for the presence of haemadsorption. </obo:IAO_0000112>
+        <obo:IAO_0000115>Suggested definition: Process by which a virus infected cell absorbs red blood cells on its surface due to binding of the red blood cells to surface-expressed viral hemagluttinins.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">the absorption of red blood cells by haemagglutinins</obo:IAO_0000115>
-        <obo:IAO_0000116>Should be moved to a higher ontology? Or no? -SB</obo:IAO_0000116>
+        <obo:IAO_0000116>Move to VIDO? -SB</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">WEB: http://virology-online.com/general/Test1.htm</obo:IAO_0000119>
+        <obo:IAO_0000119>https://www.sciencedirect.com/topics/immunology-and-microbiology/hemadsorption</obo:IAO_0000119>
         <rdfs:label xml:lang="en">haemadsorption</rdfs:label>
     </owl:Class>
     
@@ -4567,10 +4615,25 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0000770 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000770">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000115>An annotation event is a data transformation event which encompasses adding biological information to genome sequence. This is a very complex task, and the process for doing this is rapidly evolving. Several groups are doing automated computational annotation of several genomes. Features that are added to the genome often include gene models, SNPs, and STSs.</obo:IAO_0000115>
+        <obo:IAO_0100001>OBI:sequence annotation</obo:IAO_0100001>
+        <rdfs:label>annotation event</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0000772 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000772">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000116>What is this referring to? The &apos;locus name&apos;?: 
+
+https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#LocusNameB</obo:IAO_0000116>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank name</rdfs:label>
     </owl:Class>
     
@@ -4580,6 +4643,8 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000773">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000115>TO DO</obo:IAO_0000115>
+        <obo:IAO_0000116>I don&apos;t know what this is referring to. -SB</obo:IAO_0000116>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank notes</rdfs:label>
     </owl:Class>
     
@@ -4716,6 +4781,7 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000803">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000116>Not sure what this is meant to refer to.</obo:IAO_0000116>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank district</rdfs:label>
     </owl:Class>
     
@@ -4734,6 +4800,12 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000813">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000115>An identifier that is used in a traces information file to denote a sequence stored in GenBank.</obo:IAO_0000115>
+        <obo:IAO_0000116>Definition added 11/1/2020
+
+Move to &apos;sequence identifier&apos;?</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119>https://www.ncbi.nlm.nih.gov/WebSub/html/help/trace-table.html</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank template_id</rdfs:label>
     </owl:Class>
     
@@ -4743,6 +4815,9 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000818">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000115>Data item specifiying the date the sequence was submitted to Genbank.</obo:IAO_0000115>
+        <obo:IAO_0000116>Added definition 10/30/2020 -SB</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank submission date</rdfs:label>
     </owl:Class>
     
@@ -4751,8 +4826,9 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
     <!-- http://purl.obolibrary.org/obo/FLU_0000825 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000825">
-        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000490"/>
-        <rdfs:comment>To do -SB</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000171"/>
+        <obo:IAO_0000115>Suggested definition: Nucleic acid extraction protocol where the relevant nucleic acid fraction is RNA.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RNA extraction protocol</rdfs:label>
     </owl:Class>
     
@@ -4837,6 +4913,9 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000851">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000115>Data item specifying the date that the GenBank sequence submission was rejected.</obo:IAO_0000115>
+        <obo:IAO_0000116>Definition added on 10/30/2020</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genbank reject date</rdfs:label>
     </owl:Class>
     
@@ -4858,14 +4937,14 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000859">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
-        <obo:IAO_0000115>Suggested definition: Measurement datum specifying the number of nucleotide base pairs (or amino acid residues) in a submitted GenBank sequence record.</obo:IAO_0000115>
+        <obo:IAO_0000115>Suggested definition: Measurement datum specifying the number of nucleotide base pairs (or amino acid residues) in the GenBank sequence record.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The length is a quality that describes measure of the nucleotide or amino acid sequence from beginning to end.</obo:IAO_0000115>
         <obo:IAO_0000116>Do we really need a class for GenBank sequence length? If a given sequence is submitted to two different databases, with the information about its length in each case, why isn&apos;t that just the same data item recorded in two databases? 
 
 Before submitting the sequence to GenBank, the lab measures the number of its base pairs. The output of this measurement is a data item about the sequence. Then this data is entered into the &apos;sequence length&apos; data field in GenBank. Unless the idea is that a new ICE is thereby produced? 
 
 I guess the measurement datum changes in some sense, it becomes data about a GenBank entry when the sequence is submitted (whereas, if the sequence was never submitted it would have not have taken on this feature), but that does that mean we need a new class? -SB [10/18/2020]</obo:IAO_0000116>
-        <obo:IAO_0000116>If this class is kept, it should be a child of &apos;sequence read length measurement datum&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000116>Should this be a child of OBI &apos;sequence read length measurement datum&apos;?</obo:IAO_0000116>
         <obo:IAO_0000119>https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#SequenceLengthB</obo:IAO_0000119>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wiki:http://en.wikipedia.org/wiki/Length</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank sequence length</rdfs:label>
@@ -4877,6 +4956,10 @@ I guess the measurement datum changes in some sense, it becomes data about a Gen
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000860">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000115>Data item specifying the date the sequence was prepared for submission to GenBank.</obo:IAO_0000115>
+        <obo:IAO_0000116>Definition added on 10/30/2020</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119>https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#JournalB</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank prep_date</rdfs:label>
     </owl:Class>
     
@@ -5069,6 +5152,9 @@ Source: https://en.wikipedia.org/wiki/Bird_measurement#Head</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000913">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000116>Does this have anything to do with a lot number for a batch submission? 
+
+Move to IAO:lot number?</obo:IAO_0000116>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank lot</rdfs:label>
     </owl:Class>
     
@@ -5091,6 +5177,10 @@ Source: https://en.wikipedia.org/wiki/Bird_measurement#Head</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000923">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000115>Data item specifying the date that the GenBank sequence record was last modified.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119>https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#ModificationDateB</obo:IAO_0000119>
+        <rdfs:comment>&quot;In some cases, the modification date might correspond to the release date, but there is no way to tell just by looking at the record. If you need to know the first date of public availability for a specific sequence record, send a message to info@ncbi.nlm.nih.gov.&quot; [https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#ModificationDateB]</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank modification date</rdfs:label>
     </owl:Class>
     
@@ -5100,6 +5190,9 @@ Source: https://en.wikipedia.org/wiki/Bird_measurement#Head</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000925">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000115>Data item specifying the person or group that created the GenBank entry.</obo:IAO_0000115>
+        <obo:IAO_0000116>This is a suggested definition. Needs vetting. -SB [10/30/2020]</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank created_by_person/group</rdfs:label>
     </owl:Class>
     
@@ -5109,7 +5202,11 @@ Source: https://en.wikipedia.org/wiki/Bird_measurement#Head</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000926">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
-        <obo:IAO_0000115>Suggested definition:</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the laboratory from which a GenBank sequence submission originated.</obo:IAO_0000115>
+        <obo:IAO_0000116>Definition added on [10/30/2020]
+
+Reference to the fact that it is a sequence submitted to GenBank is needed to distinguish from lab-origin for sequences submitted elsewhere. -SB</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank origin_lab</rdfs:label>
     </owl:Class>
     
@@ -5136,7 +5233,7 @@ Source: https://en.wikipedia.org/wiki/Bird_measurement#Head</obo:IAO_0000115>
         <obo:IAO_0000116>MC, 20101203: updated sample to specimen</obo:IAO_0000116>
         <obo:IAO_0000119 xml:lang="en">GROUP: FLU</obo:IAO_0000119>
         <obo:IAO_0100001>EUPATH:0000608</obo:IAO_0100001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">specimen collection protocol</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specimen collection protocol</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5242,7 +5339,11 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000954">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genbank isolation source</rdfs:label>
+        <obo:IAO_0000115>Data item describing the local geographical source of the organism from which the GenBank sequence was derived.</obo:IAO_0000115>
+        <obo:IAO_0000116>Definition added on 10/31/2020</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119>https://www.ncbi.nlm.nih.gov/Sequin/sequin.hlp.html#ModifiersPage</obo:IAO_0000119>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank isolation source</rdfs:label>
     </owl:Class>
     
 
@@ -5254,7 +5355,7 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
         <obo:IAO_0000115 xml:lang="en">A person with the lead role on the project, as a scientist or engineer.</obo:IAO_0000115>
         <obo:IAO_0000116>Replaced with the equivalently labeled OBI term. -SB</obo:IAO_0000116>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBI:0000103</obo:IAO_0000119>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">principal investigator role</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Principal investigator role</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5272,9 +5373,12 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
     <!-- http://purl.obolibrary.org/obo/FLU_0000967 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000967">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000652"/>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000116>MC, 20101207: I believe this term reflects the biochemical treatment of a sample and is therefore not equivalent to ogms: treatment which is a treatment to alleviate a disorder</obo:IAO_0000116>
+        <obo:IAO_0000116>Not absolutely certain about the OBI replacement term I chose. Need to confirm. -SB [10/26/2020]</obo:IAO_0000116>
+        <obo:IAO_0100001>OBI:0000073 &apos;sample preparation for assay&apos;</obo:IAO_0100001>
         <rdfs:label xml:lang="en">treatment event</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -5300,7 +5404,7 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FLU_0001009"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000171"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Calendar date that antiviral treatment was administered.</obo:IAO_0000115>
@@ -5314,6 +5418,12 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000973">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000115>Identifier used in a traces information file to denote the sequencing center&apos;s internal designation for a specific sequencing project associated with a GenBank sequence record.</obo:IAO_0000115>
+        <obo:IAO_0000116>Definition added 11/1/2020. 
+
+Not sure if this is an identifier. -SB</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119>https://www.ncbi.nlm.nih.gov/WebSub/html/help/trace-table.html</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank center_project</rdfs:label>
     </owl:Class>
     
@@ -5388,8 +5498,9 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000988">
         <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000490"/>
         <obo:IAO_0000115 xml:lang="en">Method by which virus is isolated.</obo:IAO_0000115>
+        <obo:IAO_0000115>Suggested definition: Extraction protocol that specifies the procedure for isolating a virus.
+-SB</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">GROUP: FLU</obo:IAO_0000119>
-        <rdfs:comment>to do</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virus isolation protocol</rdfs:label>
     </owl:Class>
     
@@ -5409,6 +5520,13 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000993">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000116>The Sequin help documentation refers to two different available modifiers that can be added for sequences determined by PCR product:
+
+&quot;Clone-lib: Name of library from which sequence was obtained.&quot;
+
+&quot;Tissue-lib: Tissue library from which the sequence was obtained.&quot;
+
+Are either of these what the FLU group was referring to? Should both be added? -SB</obo:IAO_0000116>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank lib_name</rdfs:label>
     </owl:Class>
     
@@ -5426,11 +5544,33 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0000996 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000996">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000116>MC, 20101207: I think genomic sequencing is an assay that has specified input some DNA (genome?) and has specified output some genotype or ICE about a sequence</obo:IAO_0000116>
+        <obo:IAO_0000116>MC, 20101207: moved under DNA sequencing</obo:IAO_0000116>
+        <obo:IAO_0000116>MC, 20101207: we can&apos;t say that the output information is about the input material</obo:IAO_0000116>
+        <obo:IAO_0100001>OBI:genotyping assay</obo:IAO_0100001>
+        <rdfs:label>genomic sequencing</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0001007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0001007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/SO_0000153"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A bac_name is a quality that identifies the bacterial artifical chromosome (bac), a large insert cloning vector capable of handling large segments of cloned DNA, typically around 150 kb, which are used in the construction of genomic libraries for genome scale sequencing projects including human, mouse, Arabidopsis, and rice.</obo:IAO_0000115>
+        <obo:IAO_0000115>Suggested definition: &quot;An identifier of a BAC sequence stored in the GenBank database.&quot;</obo:IAO_0000115>
+        <obo:IAO_0000116>I have imported the term &apos;BAC&apos; from the Sequence Ontology. Thus we can simplify the definition. -SB [11/1/2020]</obo:IAO_0000116>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.ncbi.nlm.nih.gov/Class/FieldGuide/glossary.html#B</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank bac_name</rdfs:label>
     </owl:Class>
@@ -5440,7 +5580,7 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
     <!-- http://purl.obolibrary.org/obo/FLU_0001009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0001009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
@@ -5465,7 +5605,9 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A treatment that specifies which, if any, antiviral treatment has been administered to a host.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.cdc.gov/flu/professionals/antivirals/indications.htm</obo:IAO_0000119>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiviral treatment</rdfs:label>
+        <obo:IAO_0100001>Apollo_SV:00000171</obo:IAO_0100001>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antiviral treatment</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -5526,6 +5668,19 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0001031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0001031">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000115>A drug used specifically for treating viral infections.</obo:IAO_0000115>
+        <obo:IAO_0000117>Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0100001>CHEBI:36044</obo:IAO_0100001>
+        <rdfs:label>Antiviral drug</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0001033 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0001033">
@@ -5538,6 +5693,7 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
         </rdfs:subClassOf>
         <obo:IAO_0000115>Suggested definition: Function that is borne by a neuraminidase inhibitor and realized in a process that inhibits the function of the viral neuraminidase protein, thus preventing the virus from replicating by budding from the host cell. -SB [10/5/2020]</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The function of inhibiting the viral neuraminidase protein, thus preventing the virus from reproducing by budding from the host cell.</obo:IAO_0000115>
+        <obo:IAO_0000116>Changed the label from &apos;neuramindase inhibitor&apos; to &apos;neuraminidase inhibitor function&apos; after importing CHEBI:neuraminidase inhibitor to replace FLU:neuraminidase inhibitor drug. -SB</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">WEB: http://en.wikipedia.org/wiki/Neuraminidase_inhibitor</obo:IAO_0000119>
         <rdfs:label xml:lang="en">neuraminidase inhibitor function</rdfs:label>
@@ -9725,6 +9881,7 @@ I wasn&apos;t sure whether the EUPATH&apos;s &apos;specimen collection time post
         <obo:IAO_0000116>I created this term to serve as a parent for my replacement terms for FLU&apos;s &apos;hatch year&apos; and &apos;mature&apos;, which were classified in FLU, incorrectly I believe, as life stages.
 
 Not actually sure if the OBI term is an appropriate superclass. Bird banding age codes do not provide exact age measures (e.g. 1 yr, 6 months old). And so if the OBI term is meant to be restricted to exact measures this shouldn&apos;t go here. -SB [10/20/2020]</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <obo:IAO_0000119>https://sora.unm.edu/sites/default/files/27-43%20OB%20Vol%2018%231%20Apr2000.pdf
 
 https://www.pwrc.usgs.gov/bbl/manual/age.cfm</obo:IAO_0000119>
@@ -9779,6 +9936,1109 @@ Would this, and an appropriate parent class, be a good fit for the Vital Signs O
         <obo:IAO_0000116>This is meant to replace FLU:0000867 &apos;virus replication titer&apos;--unless that was supposed to refer to something else. I couldn&apos;t find that terminology used in the literature. -SB [10/23/2020]</obo:IAO_0000116>
         <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <rdfs:label>viral titer measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000165 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000165">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000115>A drug targeted at the influenza virus, which work by blocking the function of the viral neuraminidase protein, thus preventing the virus from reproducing by budding from the host cell.</obo:IAO_0000115>
+        <obo:IAO_0000117>Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0100001>CHEBI:52425</obo:IAO_0100001>
+        <rdfs:label>neuraminidase inhibitor drug</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000171 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000171">
+        <rdfs:subClassOf rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000490"/>
+        <obo:IAO_0000115>Extraction protocol that specifies a procedure for separating and recovering the nucleic acid fraction of an input material.</obo:IAO_0000115>
+        <obo:IAO_0000116>Term requested for OBI. -SB</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <oboInOwl:hasDbXref>EFO:nucleic acid extraction protocol</oboInOwl:hasDbXref>
+        <rdfs:label>nucleic acid extraction protocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000172 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000172">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019062"/>
+        <obo:IAO_0000115>Virus attachment stage during which Influenza A virus bonds with a host cell.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus attachment stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000173 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000173">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019062"/>
+        <obo:IAO_0000115>Virus attachment stage during which Influenza B virus bonds with a host cell.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus attachment stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000174 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000174">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019062"/>
+        <obo:IAO_0000115>Virus attachment stage during which Influenza C virus bonds with a host cell.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus attachment stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000175 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000175">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046718"/>
+        <obo:IAO_0000115>Virus penetration stage during which Influenza A virus penetrates a host cell.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus penetration stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000176 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000176">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046718"/>
+        <obo:IAO_0000115>Virus penetration stage during which Influenza B virus penetrates a host cell.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus penetration stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000177 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000177">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046718"/>
+        <obo:IAO_0000115>Virus penetration stage during which Influenza C virus penetrates a host cell.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus penetration stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000178 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000178">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_19076"/>
+        <obo:IAO_0000115>Virus release stage during which Influenza A virus is released from a host cell</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus release stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000179 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000179">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_19076"/>
+        <obo:IAO_0000115>Virus release stage during which Influenza B virus is released from a host cell</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus release stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000180 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000180">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_19076"/>
+        <obo:IAO_0000115>Virus release stage during which Influenza C virus is released from a host cell</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus release stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000181 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000181">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019068"/>
+        <obo:IAO_0000115>Virus synthesis stage during which components necessary for formation of Influenza A virus combine forming a complete Influenza A virus particle.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus synthesis stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000182 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000182">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019068"/>
+        <obo:IAO_0000115>Virus synthesis stage during which components necessary for formation of Influenza B virus combine forming a complete Influenza B virus particle.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus synthesis stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000183 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000183">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019068"/>
+        <obo:IAO_0000115>Virus synthesis stage during which components necessary for formation of Influenza C virus combine forming a complete Influenza C virus particle.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus synthesis stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000184 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000184">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019083"/>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus transcription stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000185 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000185">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019083"/>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus transcription stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000186 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000186">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019083"/>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus transcription stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000187 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000187">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019081"/>
+        <obo:IAO_0000115>Virus translation stage during which Influenza A virus genome copying ocurs, including nucleotide metabolism.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus translation stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000188 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000188">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019081"/>
+        <obo:IAO_0000115>Virus translation stage during which Influenza B virus genome copying ocurs, including nucleotide metabolism.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus translation stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000189 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000189">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019081"/>
+        <obo:IAO_0000115>Virus translation stage during which Influenza C virus genome copying ocurs, including nucleotide metabolism.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus translation stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000190 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000190">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019061"/>
+        <obo:IAO_0000115>Virus uncoating stage during which Influenza A virus uncoats outer proteins to release genetic material into host cell.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus uncoating stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000191 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000191">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019061"/>
+        <obo:IAO_0000115>Virus uncoating stage during which Influenza B virus uncoats outer proteins to release genetic material into host cell.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus uncoating stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000192 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000192">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019061"/>
+        <obo:IAO_0000115>Virus uncoating stage during which Influenza C virus uncoats outer proteins to release genetic material into host cell.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus uncoating stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000193">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001016"/>
+        <obo:IAO_0000115>Virus replication in which Influenza A virus is replicated.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus replication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000194 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000194">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001016"/>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000117>Virus replication in which Influenza B virus is replicated.</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus replication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000195 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000195">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001016"/>
+        <obo:IAO_0000115>Virus replication in which Influenza B virus is replicated.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus replication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000196 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000196">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001194"/>
+        <obo:IAO_0000115>Viral pathogenesis process realization of an infectious structure disposition inhering in an Influenza A virus or an Influnza A virus population, having at least the proper process parts: (1) pathogen transmission, (2) establishment of localization in host, (3) process of establishing a viral infection, and (4) appearance of a virus disorder.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus pathogenesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000197 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000197">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001194"/>
+        <obo:IAO_0000115>Viral pathogenesis process realization of an infectious structure disposition inhering in an Influenza B virus or an Influnza B virus population, having at least the proper process parts: (1) pathogen transmission, (2) establishment of localization in host, (3) process of establishing a viral infection, and (4) appearance of a virus disorder.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus pathogenesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000198 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000198">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001194"/>
+        <obo:IAO_0000115>Viral pathogenesis process realization of an infectious structure disposition inhering in an Influenza C virus or an Influnza C virus population, having at least the proper process parts: (1) pathogen transmission, (2) establishment of localization in host, (3) process of establishing a viral infection, and (4) appearance of a virus disorder.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus pathogenesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000199">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VIDO_0001122"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_11320"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000664"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000202"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Virus disorder that exists as a result of a process of formation of disorder initiated by Influenza A virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus disorder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000200 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000200">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VIDO_0001122"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_11520"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000664"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000202"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Virus disorder that exists as a result of a process of formation of disorder initiated by Influenza B virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus disorder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000201 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000201">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VIDO_0001122"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_11552"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000664"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000202"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Virus disorder that exists as a result of a process of formation of disorder initiated by Influenza B virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus disorder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000202 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000202">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001120"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000193"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000194"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000195"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_11320"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_11520"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_11552"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Viral disease course that is the realization of some influenza disease and has participant some influenza virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza disease course</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000203 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000203">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001387"/>
+        <obo:IAO_0000115>Process of influenza realizations for which there is a statistically significant increase in the influenza incidence of a population.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza epidemic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000204 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000204">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001386"/>
+        <obo:IAO_0000115>Process in which multiple influenza epidemics caused by some influenza virus unfold over overlapping periods of time and affect organism populations located in different geographic regions, including different countries and continents.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza pandemic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000208 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000208">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000480"/>
+        <obo:IAO_0000115>Infection incidence that is the number of organisms in the population that become infected by Influenza A virus during a specified period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus incidence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000209 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000209">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000480"/>
+        <obo:IAO_0000115>Infection incidence that is the number of organisms in the population that become infected by Influenza B virus during a specified period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus incidence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000210 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000210">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000480"/>
+        <obo:IAO_0000115>Infection incidence that is the number of organisms in the population that become infected by Influenza C virus during a specified period of time.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus incidence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000211 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000211">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000482"/>
+        <obo:IAO_0000115>Infection incidence proportion involving organisms infected by Influenza A virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus incidence proportion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000212 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000212">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000482"/>
+        <obo:IAO_0000115>Infection incidence proportion involving organisms infected by Influenza B virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus incidence proportion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000213 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000213">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000482"/>
+        <obo:IAO_0000115>Infection incidence proportion involving organisms infected by Influenza C virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus incidence proportion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000214 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000214">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000484"/>
+        <obo:IAO_0000115>Infection incidence rate involving agents infected by Influenza A virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus infection incidence rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000215 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000215">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000484"/>
+        <obo:IAO_0000115>Infection incidence rate involving agents infected by Influenza B virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus infection incidence rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000216 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000216">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000484"/>
+        <obo:IAO_0000115>Infection incidence rate involving agents infected by Influenza C virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus infection incidence rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000217 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000217">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000486"/>
+        <obo:IAO_0000115>Infection prevalence involving agents infected by Influenza A virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus infection prevalence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000218 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000218">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000486"/>
+        <obo:IAO_0000115>Infection prevalence involving agents infected by Influenza B virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus infection prevalence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000219 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000219">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000486"/>
+        <obo:IAO_0000115>Infection prevalence involving agents infected by Influenza C virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus infection prevalance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000220 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000220">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000490"/>
+        <obo:IAO_0000115>Infectious disease endemicity where the infectious disease is influenza.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza endemicity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000221 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000221">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001388"/>
+        <obo:IAO_0000115>Infectious disease incidence where the infectious disease is influenza.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza incidence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000222 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000222">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000481"/>
+        <obo:IAO_0000115>Infectious disease incidence proportion where the infectious disease is influenza.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza incidence proportion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000223 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000223">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000483"/>
+        <obo:IAO_0000115>Infectious disease incidence rate where the infectious disease is influenza.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza incidence rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000224 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000224">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000487"/>
+        <obo:IAO_0000115>Infectious disease lifetime prevalence where the infectious disease is influenza.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza lifetime prevalence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000225 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000225">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000489"/>
+        <obo:IAO_0000115>Infectious disease mortality rate where the infectious disease is influenza.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza mortality rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000226 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000226">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000485"/>
+        <obo:IAO_0000115>Infectious disease prevalence where the infectious disease is influenza.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza prevalance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000227 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000227">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000494"/>
+        <obo:IAO_0000115>Infectious disease sporadicity where the infectious disease is influenza.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>influenza sporadicity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000228 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000228">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000463"/>
+        <obo:IAO_0000115>Infectious pathogen transmissibility involving Influenza A virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus pathogen transmissibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000229 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000229">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000463"/>
+        <obo:IAO_0000115>Infectious pathogen transmissibility involving Influenza B virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus pathogen transmissibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000230 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000230">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000463"/>
+        <obo:IAO_0000115>Infectious pathogen transmissibility involving Influenza C virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus pathogen transmissibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000231 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000231">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000464"/>
+        <obo:IAO_0000115>Infectivity where the pathogen is Influenza A virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus infectivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000232 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000232">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000464"/>
+        <obo:IAO_0000115>Infectivity where the pathogen is Influenza B virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus infectivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000233 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000233">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000464"/>
+        <obo:IAO_0000115>Infectivity where the pathogen is Influenza C virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus infectivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000234 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000234">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000488"/>
+        <obo:IAO_0000115>Pathogen seroprevalence where the pathogen is Influenza A virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus seroprevalence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000235 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000235">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000488"/>
+        <obo:IAO_0000115>Pathogen seroprevalence where the pathogen is Influenza B virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus seroprevalence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000236 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000236">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000488"/>
+        <obo:IAO_0000115>Pathogen seroprevalence where the pathogen is Influenza C virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus seroprevalence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000237 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000237">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000466"/>
+        <obo:IAO_0000115>Virulence where the pathogen is Influenza A virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus virulence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000238 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000238">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000466"/>
+        <obo:IAO_0000115>Virulence where the pathogen is Influenza B virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus virulence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000239 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000239">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000466"/>
+        <obo:IAO_0000115>Virulence where the pathogen is Influenza C virus.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus virulence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000240">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VIDO_0001267"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_11320"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Viral adhesion disposition borne by a functional receptor that is the disposition to participate in an Influenza A virus attachment process</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus adhesion disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000241 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000241">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VIDO_0001267"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_11520"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Viral adhesion disposition borne by a functional receptor that is the disposition to participate in an Influenza B virus attachment process</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus adhesion disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000242 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000242">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VIDO_0001267"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_11552"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Viral adhesion disposition borne by a functional receptor that is the disposition to participate in an Influenza C virus attachment process</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus adhesion disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000243 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000243">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/VIDO_0001123"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IDO_0000664"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000199"/>
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000200"/>
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000201"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000087"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                                                <owl:someValuesFrom>
+                                                                    <owl:Class>
+                                                                        <owl:unionOf rdf:parseType="Collection">
+                                                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000199"/>
+                                                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000200"/>
+                                                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000201"/>
+                                                                        </owl:unionOf>
+                                                                    </owl:Class>
+                                                                </owl:someValuesFrom>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000202"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IDO_0000664"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000199"/>
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000200"/>
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000201"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:allValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000087"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                                                <owl:someValuesFrom>
+                                                                    <owl:Class>
+                                                                        <owl:unionOf rdf:parseType="Collection">
+                                                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000199"/>
+                                                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000200"/>
+                                                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000201"/>
+                                                                        </owl:unionOf>
+                                                                    </owl:Class>
+                                                                </owl:someValuesFrom>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Viral disease that has its material basis in either an Influenza A virus disorder, an Influenza B virus disorder, or an Influenza C virus disorder.</obo:IAO_0000115>
+        <obo:IAO_0000116>This is meant to replace the Disease Ontology term. Disease Ontology definitions fail to respect the OBO principle of using Aristotelian definitions.</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000244 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000244">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001394"/>
+        <obo:IAO_0000115>Virus penetration disposition borne by a functional receptor complex that is the disposition to participate in an Influenza A virus penetration process.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza A virus penetration disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001394"/>
+        <obo:IAO_0000115>Virus penetration disposition borne by a functional receptor complex that is the disposition to participate in an Influenza B virus penetration process.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza B virus penetration disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000246 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000246">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001394"/>
+        <obo:IAO_0000115>Virus penetration disposition borne by a functional receptor complex that is the disposition to participate in an Influenza C virus penetration process.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>Influenza C virus penetration disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000248 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000248">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000115>Data item that provides cross-reference to information, stored in the BioProject resource, about the sequencing project that supports the GenBank sequence record. Consists of i) a cross-reference type (i.e. &quot;BioProject&quot;); ii) a cross-reference identifier (e.g. &quot;PRJNA177352&quot;).</obo:IAO_0000115>
+        <obo:IAO_0000116>Added term on 10/31/2020</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119>See sections 3.4.2 and 3.4.7.2 of the current GenBank release notes [https://www.ncbi.nlm.nih.gov/genbank/release/current/]
+
+Technically, the cited information concerns a data field, but the class defined refers to the data item which is entered into the relevant field. -SB</obo:IAO_0000119>
+        <rdfs:label>GenBank BioProject DBLINK</rdfs:label>
+        <rdfs:seeAlso>https://www.ncbi.nlm.nih.gov/books/NBK54016/</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -9856,7 +11116,7 @@ Would this, and an appropriate parent class, be a good fit for the Vital Signs O
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Material separation to recover the virus fraction of an input material.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an update of te equivalently labeled FLU:0000754. It should be moved to either VIDO or OBI.</obo:IAO_0000116>
+        <obo:IAO_0000116>This class is an update of the equivalently labeled FLU:0000754. It should be moved to either VIDO or OBI.</obo:IAO_0000116>
         <obo:IAO_0000117>PERSON:Melanie Courtot</obo:IAO_0000117>
         <obo:IAO_0000119>WEB: http://virology-online.com/general/Test1.htm</obo:IAO_0000119>
         <rdfs:label>virus isolation</rdfs:label>
@@ -9938,7 +11198,7 @@ It should be imported from another ontology, but I haven&apos;t been to find a g
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000776">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the GPS latitude coordinate where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the GPS latitude coordinate of the site where the sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000116>This class is an update from FLU:0000776. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
         <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
         <rdfs:label>specimen collection latitude GPS</rdfs:label>
@@ -10011,7 +11271,7 @@ This is a placeholder class meant eventually to be ported out to an appropriate 
         <obo:IAO_0000115>Data item specifying the province where a sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000116>This class is an update from FLU:0000798. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
         <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection province</rdfs:label>
+        <rdfs:label>specimen collection province data item</rdfs:label>
     </owl:Class>
     
 
@@ -10037,7 +11297,7 @@ This is a placeholder class meant eventually to be ported out to an appropriate 
         <obo:IAO_0000115>Data item specifying the name of the district where a sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000116>This class is an update from FLU:0000815. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
         <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>speciment collection district</rdfs:label>
+        <rdfs:label>specimen collection district data item</rdfs:label>
     </owl:Class>
     
 
@@ -10050,7 +11310,7 @@ This is a placeholder class meant eventually to be ported out to an appropriate 
         <obo:IAO_0000115>Data item specifying the name of the country where a sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000116>This class is an update from FLU:0000831. I have changed the original textual definition which said &quot;The name of the country where the sample was collected.&quot; -Shane Babcock</obo:IAO_0000116>
         <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection country</rdfs:label>
+        <rdfs:label>specimen collection country data item</rdfs:label>
     </owl:Class>
     
 
@@ -10072,12 +11332,12 @@ This is a placeholder class meant eventually to be ported out to an appropriate 
     <!-- http://purl.obolibrary.org/obo/IDOFLU_0000857 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000857">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000815"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
         <obo:IAO_0000115>Data item specifying the name of the sub-district where a sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000115>Data item specifying the sub-district where a sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000116>This class is an update from FLU:0000857. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
         <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection sub-district</rdfs:label>
+        <rdfs:label>specimen collection sub-district data item</rdfs:label>
     </owl:Class>
     
 
@@ -10124,7 +11384,7 @@ Either way, this class should be moved to IDO I believe. -Shane Babcock [10/28/2
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000885">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-        <obo:IAO_0000116>Besides my added editor note, this class retains the annotations of the functionally equivalent FLU:0000885, except they have been asserted in IDOFLU -Shane Babcock (10/25/2020)</obo:IAO_0000116>
+        <obo:IAO_0000116>Besides my added editor note, this class retains the annotations of the functionally equivalent FLU:0000885, except they have been asserted in IDOFLU -Shane Babcock (9/25/2020)</obo:IAO_0000116>
         <obo:IAO_0000116>If they remain, this class and its subclasses should not be IDOFLU terms. They should be imported from elsewhere. Either way, I have updated their textual definitions. I gave them two definitions. I wasn&apos;t sure whether these should be construed as data specifying the name of the collection location place, or as data specifying the collection location itself. -Shane Babcock (9/25/2020)</obo:IAO_0000116>
         <obo:IAO_0000116>MC, 20101118: renamed from collection location context</obo:IAO_0000116>
         <obo:IAO_0000116>MC, 20101118: this is a placeholder meant to be removed when we will have the collection process, which will allow us to define current subclass using the is_about relation</obo:IAO_0000116>
@@ -10168,7 +11428,7 @@ This term, &apos;hatchling stage&apos;, and the connection between these terms, 
         <obo:IAO_0000115>Data item specifying the name of the city, town, or village where a sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000116>This class is an update from FLU:0000924. I have changed the original textual definition which said &quot;The name of the city, town, or village where a sample was collected&quot;. This FLU class was meant to represent a data item that provides the information that some city is the location of a sample collection process. But the name of the city by itself is not such a data item--it is just the name of the city. Rather, the city name is used in certain context to express the relevant information. It seems to me that the relevant information content entity is that which is concretized, for example, when a specimen collector enters the name &apos;Buffalo&apos; on a collection report into the data field that is labelled &apos;collection city&apos;. By entering the name into the data field you providing the information that Buffalo is the location of the specimen collection. Similar comments apply to my revisions of the textual definitions of the other subclasses of &apos;data about a collection location&apos;. -Shane Babcock</obo:IAO_0000116>
         <obo:IAO_0000119>URL:http://www.epa-echo.gov/echo/case_report_dd.html</obo:IAO_0000119>
-        <rdfs:label>specimen collection city</rdfs:label>
+        <rdfs:label>specimen collection city data item</rdfs:label>
     </owl:Class>
     
 
@@ -10177,7 +11437,7 @@ This term, &apos;hatchling stage&apos;, and the connection between these terms, 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000929">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the GPS longtitude coordinate where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the GPS longtitude coordinate of the site where the sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000116>This class is an update from FLU:0000929. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
         <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
         <rdfs:label>specimen collection longtitude GPS</rdfs:label>
@@ -10224,7 +11484,7 @@ Needs to be sent to another ontology, OBI? -SB [9/18/2020]</obo:IAO_0000116>
         <obo:IAO_0000115>Data item specifying the place where a sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000116>This class is an update from FLU:0000969. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
         <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection location name</rdfs:label>
+        <rdfs:label>specimen collection location data item</rdfs:label>
     </owl:Class>
     
 
@@ -10233,11 +11493,11 @@ Needs to be sent to another ontology, OBI? -SB [9/18/2020]</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000994">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the name of the state where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the name of the state where the sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000115>Data item specifying the state where a sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
         <obo:IAO_0000119>This class is an update from FLU:0000994. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000119>
-        <rdfs:label>specimen collection state</rdfs:label>
+        <rdfs:label>specimen collection state data item</rdfs:label>
     </owl:Class>
     
 
@@ -11296,12 +12556,12 @@ I am not sure exactly what do with these classes.</obo:OBI_0001847>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000588"/>
-        <obo:IAO_0000115 xml:lang="en">Collective resistance disposition that inheres in an organism population where the proportion of the population with immunity to an infectious agent is high resulting in a low number of transmissions from hosts to susceptible individuals.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Collective resistance disposition that inheres in an organism population where the proportion of the population with immunity to an infectious pathogen is high resulting in a low number of transmissions from hosts to susceptible individuals.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/ido.owl</obo:IAO_0000412>
-        <rdfs:label xml:lang="en">herd immunity to infectious organism</rdfs:label>
+        <rdfs:label xml:lang="en">herd immunity to infectious pathogen</rdfs:label>
     </owl:Class>
     
 
@@ -11567,7 +12827,14 @@ I am not sure exactly what do with these classes.</obo:OBI_0001847>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0000596"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0001054"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">Quality that inheres in an infectious agent or infectious structure and is the likelihood that the agent or structure will undergo a horizontal transmission process.</obo:IAO_0000115>
@@ -17028,6 +18295,28 @@ editor = PRS</obo:IAO_0000232>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000094"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000456"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111 xml:lang="en">sample preparation for assay</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">A sample_preparation_for_assay is a protocol_application including material_enrollments and biomaterial_transformations. definition_source: OBI.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">PlanAndPlannedProcess Branch</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">study</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">OBI branch derived</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:label xml:lang="en">sample preparation for assay</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000079 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000079">
@@ -19716,6 +21005,7 @@ The following are NOT conclusions based on data: data themselves; results from p
         <obo:IAO_0000115>A planned process that identifies and reports sequence features (e.g. protein coding regions) in sequence data.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON: Jie Zheng, Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000119>NIAID GSCID-BRC metadata working group</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <dc:source>NIAID GSCID-BRC</dc:source>
         <rdfs:label xml:lang="en">sequence annotation</rdfs:label>
     </owl:Class>
@@ -21429,6 +22719,17 @@ editor date: 2017-04-18
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SO_0000153 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000153">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000001"/>
+        <obo:IAO_0000115>Bacterial Artificial Chromosome, a cloning vector that can be propagated as mini-chromosomes in a bacterial host. [database_cross_reference: SO:ma]</obo:IAO_0000115>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/so.owl</obo:IAO_0000412>
+        <rdfs:label>BAC</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/SYMP_0000099 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SYMP_0000099">
@@ -21578,6 +22879,39 @@ editor date: 2017-04-18
         <obo:IAO_0000412 xml:lang="en">http://purl.obolibrary.org/obo/trans.owl</obo:IAO_0000412>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">droplet pathogen transmission process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TRANS_0000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TRANS_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000002"/>
+        <obo:IAO_0000115>Airborne transmission is an indirect transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host while suspended in the air as dust.</obo:IAO_0000115>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/trans.owl</obo:IAO_0000412>
+        <rdfs:label>airborne transmission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TRANS_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TRANS_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000002"/>
+        <obo:IAO_0000115>Vehicle-borne transmission is an indirect transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by inanimate intermediary vehicle objects.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/trans.owl"/>
+        <rdfs:label>vehicle-borne transmission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TRANS_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TRANS_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000010"/>
+        <obo:IAO_0000115>Vehicle-borne ingestion transmission is an indirect vehicle-borne transmission process during which the pathogen is indirectly transferred from a reservoir, source or host to another host by ingestion of fluids or foods or food products including: food, water, milk, or meat products.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/trans.owl"/>
+        <rdfs:label>vehicle-borne ingestion</rdfs:label>
     </owl:Class>
     
 
@@ -22565,7 +23899,7 @@ adipose</oboInOwl:hasRelatedSynonym>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIDO_0001387">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000502"/>
-        <obo:IAO_0000115>Process of viral disease realizations and for which there is a statistically significant increase in the viral disease incidence of a population.</obo:IAO_0000115>
+        <obo:IAO_0000115>Process of viral disease realizations for which there is a statistically significant increase in the viral disease incidence of a population.</obo:IAO_0000115>
         <obo:IAO_0000115>http://purl.obolibrary.org/obo/vido.owl</obo:IAO_0000115>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">viral disease epidemic</rdfs:label>
@@ -23048,7 +24382,7 @@ adipose</oboInOwl:hasRelatedSynonym>
     <!-- http://purl.org/obo/owl/DOID#DOID_8469 -->
 
     <owl:Class rdf:about="http://purl.org/obo/owl/DOID#DOID_8469">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDO_0000436"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/VIDO_0001123"/>
         <obo:IAO_0000111 xml:lang="en">influenza</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A viral infectious disease that results_in infection, located_in respiratory tract, has_material_basis_in Influenzavirus A, has_material_basis_in Influenzavirus B, or has_material_basis_in Influenzavirus C, which are transmitted_by droplet spread of oronasal secretions during coughing, sneezing, or talking from an infected person. It is a highly contagious disease that affects birds and mammals and has_symptom chills, has_symptom fever, has_symptom sore throat, has_symptom runny nose, has_symptom muscle pains, has_symptom severe headache, has_symptom cough, and has_symptom weakness.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.org/obo/owl/DOID"/>
@@ -23061,7 +24395,7 @@ adipose</oboInOwl:hasRelatedSynonym>
 
     <owl:Class rdf:about="http://www.ebi.ac.uk/efo/EFO_0000490">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000272"/>
-        <obo:IAO_0000115>Suggested definition: Protocol that specifies a procedure for separating a desired component, such as DNA or RNA, from a mixture or compound. -SB</obo:IAO_0000115>
+        <obo:IAO_0000115>Suggested definition: Protocol that specifies a procedure for separating a desired component of an input material from the remainder. -SB</obo:IAO_0000115>
         <obo:IAO_0000115>The procedure used to obtain something from a mixture or compound by chemical or physical or mechanical means, e.g. DNA/RNA extraction</obo:IAO_0000115>
         <obo:IAO_0000116>This term replaces the equivalently labeled FLU:0001003.</obo:IAO_0000116>
         <obo:IAO_0000117>Jame Malone</obo:IAO_0000117>
