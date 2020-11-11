@@ -15,6 +15,11 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/idoflu.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/idoflu/2020update/idoflu.owl"/>
         <obo:IAO_0000232>I am having trouble figuring out what to do with some of the &apos;data about a GenBank entry&apos; classes.  -SB [10/26/2020]</obo:IAO_0000232>
+        <obo:IAO_0000232>[11/4/2020] -SB
+
+Need to sort some things out with OBI regarding their term &apos;GenBank ID&apos; (called an Accession in the GenBank format) which is defined as a CRID symbol that uniquely identifies the submitted sequence record. In GenBank, locus name is also a unique identifier of the submitted sequence and is a CRID symbol. In that case the OBI definition lacks differentia to distinguish locus name from GenBank ID. 
+
+In the case of GenBank records with 8 characters, the locus name and the GenBank ID are the same. But in the case of records with 6 character GenBank IDs, the locus name is not the same. Rather, it consists of the first letters of the genus and species name followed by the GenBank ID. [https://www.ncbi.nlm.nih.gov/genbank/samplerecord/#LocusNameB]</obo:IAO_0000232>
         <dc:contributor xml:lang="en">Alan Ruttenberg</dc:contributor>
         <dc:contributor xml:lang="en">Barry Smith</dc:contributor>
         <dc:contributor>John Beverley</dc:contributor>
@@ -641,19 +646,44 @@ EquivalentTo: xsd:integer[&gt; 2151 , &lt;= 2300]
 
     <!-- http://purl.obolibrary.org/obo/OBI_0001847 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001847"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001847">
+        <obo:IAO_0000114>ready for release</obo:IAO_0000114>
+        <obo:IAO_0000115>An alternative term used by the ISA tools project (http://isa-tools.org).</obo:IAO_0000115>
+        <obo:IAO_0000116>Requested by Alejandra Gonzalez-Beltran https://sourceforge.net/tracker/?func=detail&amp;aid=3603413&amp;group_id=177891&amp;atid=886178</obo:IAO_0000116>
+        <obo:IAO_0000117>Philippe Rocca-Serra, Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000119>ISA tools project ( http://isa-tools.org)</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:label>ISA alternative term</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/OBI_0001886 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001886"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0001886">
+        <obo:IAO_0000114>ready for release</obo:IAO_0000114>
+        <obo:IAO_0000115>An alternative term used by the National Institute of Allergy and Infectious Diseases (NIAID) Genomic Sequencing Centers for Infectious Diseases (GSCID) and Bioinformatics Resource Centers (BRC).</obo:IAO_0000115>
+        <obo:IAO_0000117>Chris Stoeckert, Jie Zheng</obo:IAO_0000117>
+        <obo:IAO_0000119>NIAID GSCID-BRC metadata working group</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:label>NIAID GSCID-BRC alternative term</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/OBI_9991118 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OBI_9991118"/>
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OBI_9991118">
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>An alternative term used by the IEDB.</obo:IAO_0000115>
+        <obo:IAO_0000117>Randi Vita, Jason Greenbaum, Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000119>IEDB</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <rdfs:label>IEDB alternative term</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -2176,6 +2206,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
         <obo:IAO_0000115>A series of digits that are assigned consecutively to each sequence record processed by NCBI. The GI number bears no resemblance to the Accession number of the sequence record.</obo:IAO_0000115>
         <obo:IAO_0000115>Suggested definition: A series of digits that are assigned consecutively to each sequence record processed by NCBI, which points to a specific version of a sequence record. 
 -SB [10/18/2020]</obo:IAO_0000115>
+        <obo:IAO_0000116>Should GI number and GenBank gi be CRID symbols? If not, why is the GenBank ID a CRID symbol but not the former terms? -SB</obo:IAO_0000116>
         <obo:IAO_0000412>http://edamontology.org/EDAM.owl</obo:IAO_0000412>
         <rdfs:label>GI number</rdfs:label>
     </owl:Class>
@@ -4467,6 +4498,29 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0000411 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000411">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C17169"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://www.ebi.ac.uk/efo/EFO_0009106"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17169"/>
+        <obo:IAO_0000115>Cell fraction that has an increased concentration of one or more cell fraction components.</obo:IAO_0000115>
+        <obo:IAO_0000116>This class should eventually be moved to another ontology and then imported. -SB</obo:IAO_0000116>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBS:rbs</obo:IAO_0000119>
+        <rdfs:label>enriched cell fraction</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0000508 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000508">
@@ -4607,7 +4661,7 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000812"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">Date that the virus passage(s) took place.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Time measurement datum specifying the date that the virus passage(s) took place.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLU:MK</obo:IAO_0000119>
         <rdfs:comment>Move to VIDO? -SB [10/26/2020]</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virus passage date</rdfs:label>
@@ -4631,9 +4685,26 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000772">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
-        <obo:IAO_0000116>What is this referring to? The &apos;locus name&apos;?: 
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000116>Perhaps replace with:
 
-https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#LocusNameB</obo:IAO_0000116>
+&apos;Genbank common name&apos; [http://edamontology.org/data_1874]
+Def = Common name for an organism as used in the GenBank database.
+
+or
+
+Perhaps this can be covered by the following NCBITaxon annotation property:
+
+&apos;genbank common name&apos; http://purl.obolibrary.org/obo/ncbitaxon#genbank_common_name
+
+11/9/2020 -SB</obo:IAO_0000116>
+        <obo:IAO_0000116>This could correspond to a variety of fields in the GenBank flatfile format:
+
+&apos;Source&apos; = the name that is commonly used for the organism that is the source of the sequence.
+
+&apos;Organism&apos; = the scientific name of the organism that is the source of the sequence.
+
+GenBank locus name</obo:IAO_0000116>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank name</rdfs:label>
     </owl:Class>
     
@@ -4643,9 +4714,38 @@ https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#LocusNameB</obo:IAO_00001
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000773">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
-        <obo:IAO_0000115>TO DO</obo:IAO_0000115>
-        <obo:IAO_0000116>I don&apos;t know what this is referring to. -SB</obo:IAO_0000116>
+        <obo:IAO_0000112>See:
+https://www.fludb.org/brc/fluSegmentDetails.spg?ncbiGenomicAccession=MH669673&amp;decorator=influenza</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115>Tentative: 
+
+&quot;Data item providing additional comments or information about the GenBank sequence.&quot;</obo:IAO_0000115>
+        <obo:IAO_0000116>&quot;Qualifier       /note=
+Definition      any comment or additional information
+Value format    &quot;text&quot;
+Example         /note=&quot;This qualifier is equivalent to a comment.&quot; &quot;
+
+See: https://www.ddbj.nig.ac.jp/ddbj/full_index-e.html#note
+
+But also see EUPATH&apos;s isolate submission form for facilitating GenBank uploads:
+
+https://static-content.veupathdb.org//documents/VEuPathDB_User_Documentation_Sep2020.pdf
+
+-SB [11/8/2020]</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank notes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000776 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000776">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
+        <obo:IAO_0000115>Data item specifying the GPS latitude coordinate of the site where the sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000116>I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
+        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
+        <rdfs:label>specimen collection latitude GPS</rdfs:label>
     </owl:Class>
     
 
@@ -4749,6 +4849,19 @@ https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#LocusNameB</obo:IAO_00001
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0000798 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000798">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
+        <obo:IAO_0000115>Data item specifying the name of the province where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the province where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000116>I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
+        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
+        <rdfs:label>specimen collection province</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0000800 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000800">
@@ -4781,7 +4894,8 @@ https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#LocusNameB</obo:IAO_00001
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000803">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
-        <obo:IAO_0000116>Not sure what this is meant to refer to.</obo:IAO_0000116>
+        <obo:IAO_0000116>Assuming this is a data item specifying the district where the isolate was collected, I don&apos;t see why it is needed. If it is important enough to add, then why not have a GenBank class corresponding to each of the other subclassses of &apos;data about a collection location&apos;, e.g. &apos;collection country&apos;, &apos;collection city&apos; etc? These terms are also used regularly for database entries associated with GenBank records. Since they are not used, I lean towards removing this. -SB</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank district</rdfs:label>
     </owl:Class>
     
@@ -4791,6 +4905,7 @@ https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#LocusNameB</obo:IAO_00001
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000811">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank projected_timeline</rdfs:label>
     </owl:Class>
     
@@ -4800,13 +4915,26 @@ https://www.ncbi.nlm.nih.gov/Sitemap/samplerecord.html#LocusNameB</obo:IAO_00001
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000813">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
-        <obo:IAO_0000115>An identifier that is used in a traces information file to denote a sequence stored in GenBank.</obo:IAO_0000115>
+        <obo:IAO_0000115>An identifier used in a traces information file to denote a sequence stored in GenBank.</obo:IAO_0000115>
         <obo:IAO_0000116>Definition added 11/1/2020
 
 Move to &apos;sequence identifier&apos;?</obo:IAO_0000116>
         <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <obo:IAO_0000119>https://www.ncbi.nlm.nih.gov/WebSub/html/help/trace-table.html</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank template_id</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000815 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000815">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
+        <obo:IAO_0000115>Data item specifying the district where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the name of the district where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000116>I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
+        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
+        <rdfs:label>specimen collection district</rdfs:label>
     </owl:Class>
     
 
@@ -4849,6 +4977,19 @@ Move to &apos;sequence identifier&apos;?</obo:IAO_0000116>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://volusia.org/birding/glossary.htm</obo:IAO_0000119>
         <rdfs:label xml:lang="en">obsolete primaries flight feather</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000831 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000831">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
+        <obo:IAO_0000115>Data item specifying the country where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the name of the country where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000116>I have changed the original textual definition which said &quot;The name of the country where the sample was collected.&quot; -Shane Babcock</obo:IAO_0000116>
+        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
+        <rdfs:label>specimen collection country</rdfs:label>
     </owl:Class>
     
 
@@ -4933,6 +5074,19 @@ Move to &apos;sequence identifier&apos;?</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0000857 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000857">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
+        <obo:IAO_0000115>Data item specifying the name of the sub-district where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the sub-district where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000117>SB</obo:IAO_0000117>
+        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
+        <rdfs:label>specimen collection sub-district</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0000859 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000859">
@@ -4986,12 +5140,14 @@ I guess the measurement datum changes in some sense, it becomes data about a Gen
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000153"/>
         <obo:IAO_0000115 xml:lang="en">A bird after hatch year.</obo:IAO_0000115>
         <obo:IAO_0000115>Suggested definition: &quot;Bird banding age code that denotes that a bird is in at least its second calendar year or older. Year of hatch is unknown.&quot;</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <obo:IAO_0000118>mature 
 
 [Note: this was the original label from FLU, but the label I have replaced it with is the standard label used by bird banders -SB]</obo:IAO_0000118>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.dfw.state.or.us/resources/hunting/upland_bird/projects/mtn-quail.asp</obo:IAO_0000119>
         <obo:IAO_0000119>[for suggested definition] https://sora.unm.edu/sites/default/files/27-43%20OB%20Vol%2018%231%20Apr2000.pdf</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>AHY</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>adult</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>While the exact year of hatching is unknown in cases where this age code is applied, it is used when it is at least known that the bird hatched before the calendar year of banding. [https://www.pwrc.usgs.gov/bbl/manual/age.cfm]</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">after hatch year</rdfs:label>
     </owl:Class>
@@ -5129,6 +5285,11 @@ Source: https://en.wikipedia.org/wiki/Bird_measurement#Head</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000909">
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000116>11/9/2020 -SB
+
+Actually, perhaps this term is replaced by &apos;OBI:specimen identifier assigned by sequencing facility&apos;
+
+Adding that term in case</obo:IAO_0000116>
         <obo:IAO_0100001>GENEPIO:0000079</obo:IAO_0100001>
         <rdfs:label>sample name</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5152,9 +5313,18 @@ Source: https://en.wikipedia.org/wiki/Bird_measurement#Head</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000913">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000116>Does this have anything to do with a lot number for a batch submission? 
 
+Or does it have to do with the lot number for the reagent used in the sequencing?
+
 Move to IAO:lot number?</obo:IAO_0000116>
+        <obo:IAO_0000116>The following is a tentative definition, on the assumption that this term has to do with batch submissions of sequences:
+
+&quot;Data item specifying the type of set to which the GenBank batch sequence submission belongs (e.g. gene type, same source organism, same publication).&quot;
+
+See: https://www.ncbi.nlm.nih.gov/books/NBK293910/</obo:IAO_0000116>
+        <obo:IAO_0000118>GenBank batch (?)</obo:IAO_0000118>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank lot</rdfs:label>
     </owl:Class>
     
@@ -5186,6 +5356,18 @@ Move to IAO:lot number?</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0000924 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000924">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
+        <obo:IAO_0000115>Data item specifying the city, town, or village where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the name of the city, town, or village where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000116>I have changed the original textual definition which said &quot;The name of the city, town, or village where a sample was collected&quot;. This FLU class was meant to represent a data item that provides the information that some city is the location of a sample collection process. But the name of the city by itself is not such a data item--it is just the name of the city. Rather, the city name is used in certain context to express the relevant information. It seems to me that the relevant information content entity is that which is concretized, for example, when a specimen collector enters the name &apos;Buffalo&apos; on a collection report into the data field that is labelled &apos;collection city&apos;. By entering the name into the data field you providing the information that Buffalo is the location of the specimen collection. Similar comments apply to my revisions of the textual definitions of the other subclasses of &apos;data about a collection location&apos;. -Shane Babcock</obo:IAO_0000116>
+        <rdfs:label>specimen collection city</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0000925 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000925">
@@ -5202,7 +5384,7 @@ Move to IAO:lot number?</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000926">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
-        <obo:IAO_0000115>Data item specifying the laboratory from which a GenBank sequence submission originated.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the laboratory from which the GenBank sequence submission originated.</obo:IAO_0000115>
         <obo:IAO_0000116>Definition added on [10/30/2020]
 
 Reference to the fact that it is a sequence submitted to GenBank is needed to distinguish from lab-origin for sequences submitted elsewhere. -SB</obo:IAO_0000116>
@@ -5221,6 +5403,18 @@ Reference to the fact that it is a sequence submitted to GenBank is needed to di
         <obo:IAO_0000116>MC, 20101118: moved from winged organism anatomy to length measurement datum</obo:IAO_0000116>
         <obo:IAO_0000119 xml:lang="en">GROUP: FLU</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bird wing length flat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000929 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000929">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
+        <obo:IAO_0000115>Data item specifying the GPS longtitude coordinate of the site where the sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000116>I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
+        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
+        <rdfs:label>specimen collection longtitude GPS</rdfs:label>
     </owl:Class>
     
 
@@ -5246,9 +5440,11 @@ Reference to the fact that it is a sequence submitted to GenBank is needed to di
         <obo:IAO_0000115 xml:lang="en">A bird in the first year after hatching.</obo:IAO_0000115>
         <obo:IAO_0000115>Suggested definition: &quot;Bird banding age code which denotes that a bird is in its first calendar year since hatching, and is used for the bird up to and including the December 31st of that calendar year.&quot;</obo:IAO_0000115>
         <obo:IAO_0000116>Moved from &apos;life stage&apos;. The term &apos;hatch year&apos; is an age code used by bird banders. While there are certain characteristics of birds that are associated with this age code, this term does not seem to be used to denote a life stage, like &apos;hatchling&apos; or &apos;nestling&apos;. -SB</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flu:ls [ls is the source for the original FLU definition]</obo:IAO_0000119>
         <obo:IAO_0000119>[for suggested definition] https://sora.unm.edu/sites/default/files/27-43%20OB%20Vol%2018%231%20Apr2000.pdf</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>HY</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>juvenile</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hatch year</rdfs:label>
     </owl:Class>
     
@@ -5342,7 +5538,9 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
         <obo:IAO_0000115>Data item describing the local geographical source of the organism from which the GenBank sequence was derived.</obo:IAO_0000115>
         <obo:IAO_0000116>Definition added on 10/31/2020</obo:IAO_0000116>
         <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
-        <obo:IAO_0000119>https://www.ncbi.nlm.nih.gov/Sequin/sequin.hlp.html#ModifiersPage</obo:IAO_0000119>
+        <obo:IAO_0000119>https://www.ncbi.nlm.nih.gov/Sequin/sequin.hlp.html#ModifiersPage
+
+https://www.ncbi.nlm.nih.gov/books/NBK53757/</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank isolation source</rdfs:label>
     </owl:Class>
     
@@ -5365,6 +5563,10 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000966">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000118>GenBank amplicon size
+
+???</obo:IAO_0000118>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank size</rdfs:label>
     </owl:Class>
     
@@ -5379,6 +5581,19 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
         <obo:IAO_0100001>OBI:0000073 &apos;sample preparation for assay&apos;</obo:IAO_0100001>
         <rdfs:label xml:lang="en">treatment event</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000969 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000969">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
+        <obo:IAO_0000115>Data item specifying the name of the place where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the place where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000116>I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
+        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
+        <rdfs:label>specimen collection location</rdfs:label>
     </owl:Class>
     
 
@@ -5407,7 +5622,7 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000171"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">Calendar date that antiviral treatment was administered.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Time measurement datum that specifies the date that the antiviral treatment was administered.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLU:MK</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiviral treatment date</rdfs:label>
     </owl:Class>
@@ -5463,9 +5678,11 @@ Not sure if this is an identifier. -SB</obo:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000980">
         <rdfs:subClassOf rdf:resource="http://edamontology.org/data_2314"/>
         <obo:IAO_0000115 xml:lang="en">A GI number is a quality that is an identifier assigned to all sequences at the NCBI, which points to a specific version of a sequence record. GI stands for GenInfo, a database system at NCBI that preceded the Entrez system.</obo:IAO_0000115>
-        <obo:IAO_0000115>Suggested definition: GI number assigned to a GenBank sequence record.</obo:IAO_0000115>
+        <obo:IAO_0000115>Suggested definition: &quot;GI number assigned to a GenBank sequence record, which points to a specific version of the sequence record.&quot;</obo:IAO_0000115>
         <obo:IAO_0000116>Not sure if we need a separate class for &apos;GenBank gi&apos;. But the definition originally given to this class in FLU was drawn from a glossary entry that was not specific to GenBank in particular (see definition source link). So, if we keep this term I suggest going with my definition, and using the more general EDAM term as its parent. -SB [10/18/2020]</obo:IAO_0000116>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.ncbi.nlm.nih.gov/Class/FieldGuide/glossary.html#G</obo:IAO_0000119>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.ncbi.nlm.nih.gov/Class/FieldGuide/glossary.html#G
+
+https://www.ncbi.nlm.nih.gov/genbank/samplerecord/#GInB</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank gi</rdfs:label>
     </owl:Class>
     
@@ -5520,14 +5737,37 @@ Not sure if this is an identifier. -SB</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000993">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
+        <obo:IAO_0000115>Suggested: Unique identifier of the sequencing library from which the GenBank sequence was obtained.</obo:IAO_0000115>
         <obo:IAO_0000116>The Sequin help documentation refers to two different available modifiers that can be added for sequences determined by PCR product:
 
 &quot;Clone-lib: Name of library from which sequence was obtained.&quot;
 
 &quot;Tissue-lib: Tissue library from which the sequence was obtained.&quot;
 
-Are either of these what the FLU group was referring to? Should both be added? -SB</obo:IAO_0000116>
+Assuming we use the suggested definition for &apos;lib_name&apos;.
+
+Clone-lib = Unique identifier of the cloning library from which the GenBank sequence was obtained.
+
+Tissue-lib = Unique identifier of the tissue library from which the GenBank sequence was obtained.
+ 
+-SB [11/8/2020]</obo:IAO_0000116>
+        <obo:IAO_0000118>GenBank library_ID
+
+I suggest to use this label instead. I noticed that the SRA submission templates (see: https://submit.ncbi.nlm.nih.gov/templates/) use &apos;library_ID&apos;. Plus, I think that the label &apos;lib_name&apos; pertains to something ubiquitous than sequence libraries.</obo:IAO_0000118>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank lib_name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000994 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000994">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
+        <obo:IAO_0000115>Data item specifying the name of the state where the sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000115>Data item specifying the state where a sample was collected.</obo:IAO_0000115>
+        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
+        <obo:IAO_0000119>I have changed the original textual definition. -Shane Babcock</obo:IAO_0000119>
+        <rdfs:label>specimen collection state</rdfs:label>
     </owl:Class>
     
 
@@ -11071,29 +11311,6 @@ Technically, the cited information concerns a data field, but the class defined 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000411 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000411">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C17169"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                        <owl:someValuesFrom rdf:resource="http://www.ebi.ac.uk/efo/EFO_0009106"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17169"/>
-        <obo:IAO_0000115>Cell fraction that has an increased concentration of one or more cell fraction components.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class replaces FLU:0000411. It should eventually be moved to another ontology and then imported. -SB</obo:IAO_0000116>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBS:rbs</obo:IAO_0000119>
-        <rdfs:label>enriched cell fraction</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IDOFLU_0000751 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000751">
@@ -11194,18 +11411,6 @@ It should be imported from another ontology, but I haven&apos;t been to find a g
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000776 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000776">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the GPS latitude coordinate of the site where the sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an update from FLU:0000776. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
-        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection latitude GPS</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IDOFLU_0000778 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000778">
@@ -11263,19 +11468,6 @@ This is a placeholder class meant eventually to be ported out to an appropriate 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000798 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000798">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the name of the province where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000115>Data item specifying the province where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an update from FLU:0000798. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
-        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection province data item</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IDOFLU_0000812 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000812">
@@ -11285,32 +11477,6 @@ This is a placeholder class meant eventually to be ported out to an appropriate 
         <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://www.merriam-webster.com/medical/passage</obo:IAO_0000119>
         <rdfs:label>virus passage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000815 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000815">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the district where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000115>Data item specifying the name of the district where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an update from FLU:0000815. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
-        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection district data item</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000831 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000831">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the country where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000115>Data item specifying the name of the country where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an update from FLU:0000831. I have changed the original textual definition which said &quot;The name of the country where the sample was collected.&quot; -Shane Babcock</obo:IAO_0000116>
-        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection country data item</rdfs:label>
     </owl:Class>
     
 
@@ -11325,19 +11491,6 @@ This is a placeholder class meant eventually to be ported out to an appropriate 
         <obo:IAO_0000118>virus passage number</obo:IAO_0000118>
         <obo:IAO_0000119>URL:http://www.pnas.org/cgi/content/abstract/97/13/6974</obo:IAO_0000119>
         <rdfs:label>virus passage history record</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000857 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000857">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the name of the sub-district where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000115>Data item specifying the sub-district where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an update from FLU:0000857. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
-        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection sub-district data item</rdfs:label>
     </owl:Class>
     
 
@@ -11420,31 +11573,6 @@ This term, &apos;hatchling stage&apos;, and the connection between these terms, 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000924 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000924">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the city, town, or village where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000115>Data item specifying the name of the city, town, or village where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an update from FLU:0000924. I have changed the original textual definition which said &quot;The name of the city, town, or village where a sample was collected&quot;. This FLU class was meant to represent a data item that provides the information that some city is the location of a sample collection process. But the name of the city by itself is not such a data item--it is just the name of the city. Rather, the city name is used in certain context to express the relevant information. It seems to me that the relevant information content entity is that which is concretized, for example, when a specimen collector enters the name &apos;Buffalo&apos; on a collection report into the data field that is labelled &apos;collection city&apos;. By entering the name into the data field you providing the information that Buffalo is the location of the specimen collection. Similar comments apply to my revisions of the textual definitions of the other subclasses of &apos;data about a collection location&apos;. -Shane Babcock</obo:IAO_0000116>
-        <obo:IAO_0000119>URL:http://www.epa-echo.gov/echo/case_report_dd.html</obo:IAO_0000119>
-        <rdfs:label>specimen collection city data item</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000929 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000929">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the GPS longtitude coordinate of the site where the sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an update from FLU:0000929. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
-        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection longtitude GPS</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IDOFLU_0000937 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000937">
@@ -11472,32 +11600,6 @@ Needs to be sent to another ontology, OBI? -SB [9/18/2020]</obo:IAO_0000116>
         <obo:IAO_0100001>NCIT:C93857</obo:IAO_0100001>
         <rdfs:label>laboratory name</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000969 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000969">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the name of the place where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000115>Data item specifying the place where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an update from FLU:0000969. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000116>
-        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <rdfs:label>specimen collection location data item</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000994 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000994">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000885"/>
-        <obo:IAO_0000115>Data item specifying the name of the state where the sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000115>Data item specifying the state where a sample was collected.</obo:IAO_0000115>
-        <obo:IAO_0000119>GROUP: FLU</obo:IAO_0000119>
-        <obo:IAO_0000119>This class is an update from FLU:0000994. I have changed the original textual definition. -Shane Babcock</obo:IAO_0000119>
-        <rdfs:label>specimen collection state data item</rdfs:label>
     </owl:Class>
     
 
@@ -20621,7 +20723,7 @@ This general class was not included, though it seems that &apos;DNA sequence dat
         </rdfs:subClassOf>
         <obo:IAO_0000111 xml:lang="en">GenBank ID</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A CRID symbol uniquely indentifies the submitted GeneBank sequence record.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A CRID symbol uniquely indentifies the submitted GenBank sequence record.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Person: Chris Stoeckert, Jie Zheng</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">NIAID GSCID-BRC metadata working group</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -20854,6 +20956,41 @@ is realized in a specimen collection process.</obo:IAO_0000115>
         <obo:OBI_0001886>Sequencing Facility</obo:OBI_0001886>
         <dc:source>NIAID GSCID-BRC</dc:source>
         <rdfs:label xml:lang="en">sequencing facility organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001901 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001901">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001616"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000574"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001891"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115>A specimen identifier which is assigned by a sequencing facility</obo:IAO_0000115>
+        <obo:IAO_0000117>Chris Stoeckert, Jie Zheng</obo:IAO_0000117>
+        <obo:IAO_0000119>NIAID GSCID-BRC metadata working group</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <obo:OBI_0001886>Sample ID - Sequencing Facility</obo:OBI_0001886>
+        <rdfs:label>specimen identifier assigned by sequencing facility</rdfs:label>
     </owl:Class>
     
 
@@ -22279,6 +22416,11 @@ editor date: 2017-04-18
         <obo:IAO_0000117>Alice Nzinga</obo:IAO_0000117>
         <obo:IAO_0000119>http://biospecimens.cancer.gov/resources/sops/GTEx_SOPs/II/A/GTEx%20Tissue%20Procurement%20SOP%20%28PR-0004%20v1.2.1%29.pdf</obo:IAO_0000119>
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/omiabis.owl</obo:IAO_0000412>
+        <rdfs:comment>11/9/2020 -SB
+
+There are tentative plans to import OMIABIS:0001046 to OBI, and relabel it as &quot;specimen identifier&quot;. OBI currently uses the label &apos;specimen identifier&apos; for OBI:0001616, which is classified as a CRID symbol. The plan is to re-label OBI:0001616 and make it a subclass of OMIABIS:0001046.
+
+See: https://github.com/obi-ontology/obi/issues/1246</rdfs:comment>
         <rdfs:label>specimen ID</rdfs:label>
     </owl:Class>
     
