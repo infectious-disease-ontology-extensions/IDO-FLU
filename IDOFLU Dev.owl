@@ -4498,6 +4498,28 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0000259 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000259">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000231>Replaced by VIDO:0001406, &apos;virus passage date&apos;</obo:IAO_0000231>
+        <rdfs:label>obsolete virus passage date</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000404 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000404">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000231>Replaced by VIDO:0001411</obo:IAO_0000231>
+        <rdfs:label>obsolete amplified virus preparation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0000411 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000411">
@@ -4549,6 +4571,28 @@ organization
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0000751 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000751">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0000508"/>
+        <obo:IAO_0000115>An influenza virus that is in its assembled state consisting of genomic material (DNA or RNA) surrounded by coating molecules.</obo:IAO_0000115>
+        <obo:IAO_0000116>I changed the textual definition to align with the VIDO definition of &apos;virion&apos;.</obo:IAO_0000116>
+        <rdfs:label>influenza virion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000754 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000754">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000231>Replaced by VIDO:0001414</obo:IAO_0000231>
+        <rdfs:label>obsolete virus isolation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0000755 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000755">
@@ -4559,7 +4603,7 @@ organization
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000756"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VIDO_0001410"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                                 <owl:someValuesFrom>
@@ -4586,6 +4630,17 @@ organization
         <obo:IAO_0000119 xml:lang="en">WEB: http://virology-online.com/general/Test1.htm</obo:IAO_0000119>
         <obo:IAO_0000119>https://www.sciencedirect.com/topics/immunology-and-microbiology/hemadsorption</obo:IAO_0000119>
         <rdfs:label xml:lang="en">haemadsorption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000756 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000756">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000231>Replaced by VIDO:0001410</obo:IAO_0000231>
+        <rdfs:label>obsolete viral isolate</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -4645,26 +4700,29 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
         <obo:IAO_0000115 xml:lang="en">A bird after completing the post-juvenal molt, but has not acquired the complete adult plumage. A life stage of any bird older than a nestling or chick that has not reached sexual maturity or its basic winter or first winter plumage.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://elibrary.unm.edu/sora/JFO/v017n01/p0027-p0033.pdf</obo:IAO_0000119>
         <obo:IAO_0100001>IDOFLU:sexually immature bird stage</obo:IAO_0100001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immature</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete immature</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/FLU_0000769 -->
+    <!-- http://purl.obolibrary.org/obo/FLU_0000767 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000769">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000767">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000812"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0042303"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">Time measurement datum specifying the date that the virus passage(s) took place.</obo:IAO_0000115>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLU:MK</obo:IAO_0000119>
-        <rdfs:comment>Move to VIDO? -SB [10/26/2020]</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virus passage date</rdfs:label>
+        <obo:IAO_0000115>Measurement datum that records the intensity of some molting cycle.</obo:IAO_0000115>
+        <obo:IAO_0000116>Changed the label from &apos;intensity of body moult&apos; and modified the textual definition.
+
+It should be imported from another ontology, but I haven&apos;t been to find a good home for it yet. -SB</obo:IAO_0000116>
+        <obo:IAO_0000116>The &apos;molting cycle&apos; is the periodic casting off and regeneration of an outer covering of cuticle, feathers, hair, horns, skin, etc.</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>molting intensity measurement</rdfs:label>
     </owl:Class>
     
 
@@ -4675,7 +4733,7 @@ Furthermore, what organisms are instances of this? Why is this here? Viruses nee
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115>An annotation event is a data transformation event which encompasses adding biological information to genome sequence. This is a very complex task, and the process for doing this is rapidly evolving. Several groups are doing automated computational annotation of several genomes. Features that are added to the genome often include gene models, SNPs, and STSs.</obo:IAO_0000115>
         <obo:IAO_0100001>OBI:sequence annotation</obo:IAO_0100001>
-        <rdfs:label>annotation event</rdfs:label>
+        <rdfs:label>osolete annotation event</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4789,7 +4847,7 @@ https://static-content.veupathdb.org//documents/VEuPathDB_User_Documentation_Sep
         <obo:IAO_0000115 xml:lang="en">A young bird out of the nest and able to take care of itself, but which has not completed the post-juvenal molt.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://elibrary.unm.edu/sora/JFO/v017n01/p0027-p0033.pdf</obo:IAO_0000119>
         <obo:IAO_0100001>IDOFLU:juvenile bird stage</obo:IAO_0100001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">juvenile</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete juvenile</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4802,7 +4860,7 @@ https://static-content.veupathdb.org//documents/VEuPathDB_User_Documentation_Sep
         <obo:IAO_0000115 xml:lang="en">Initial oxygen saturation is a scalar measurement datum that describes the initial volume of oxygen gas (STP) absorbed from humidity-saturated air at a total pressure of one atmosphere, per unit volume of the liquid at the temperature of measurement (units ml/l).</obo:IAO_0000115>
         <obo:IAO_0000116>MC, 20101119: moved from quality to scalar measurement datum.</obo:IAO_0000116>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://gyre.umeoce.maine.edu/data/gomoos/buoy/doc/buoy_system_doc/buoy_system/g6572.html</obo:IAO_0000119>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initial oxygen saturation</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete initial oxygen saturation</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4813,7 +4871,7 @@ https://static-content.veupathdb.org//documents/VEuPathDB_User_Documentation_Sep
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000788">
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0100001>IDOFLU:fledgling stage</obo:IAO_0100001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fledgling</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete fledgling</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4822,29 +4880,10 @@ https://static-content.veupathdb.org//documents/VEuPathDB_User_Documentation_Sep
     <!-- http://purl.obolibrary.org/obo/FLU_0000797 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000797">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000032"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000450"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000812"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A scalar measurement datum denoting the pathogenicity of a virus after several passages in cell culture.</obo:IAO_0000115>
-        <obo:IAO_0000116>MC, 20101119: moved from quality of specimen to scalar measurement datum</obo:IAO_0000116>
-        <obo:IAO_0000116>MC, 20101201: updated definition and label</obo:IAO_0000116>
-        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virus passage level</obo:IAO_0000118>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.pnas.org/cgi/content/abstract/97/13/6974</obo:IAO_0000119>
-        <rdfs:label>virus pathogenicity after passage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000231>Replaced by VIDO:0001408</obo:IAO_0000231>
+        <rdfs:label>obsolete virus pathogenicity after passage</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -4907,6 +4946,17 @@ https://static-content.veupathdb.org//documents/VEuPathDB_User_Documentation_Sep
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001010"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank projected_timeline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000812 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000812">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000231>Replaced by VIDO:0001412</obo:IAO_0000231>
+        <rdfs:label>obsolete virus passage</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -5014,7 +5064,7 @@ Move to &apos;sequence identifier&apos;?</obo:IAO_0000116>
         <obo:IAO_0000116>MC: 20101119: moved from strain specimen quality to label. Not sure this term is required.</obo:IAO_0000116>
         <obo:IAO_0000119>URL: http://www.niwa.cri.nz/rc/freshwater/fishatlas/glossary</obo:IAO_0000119>
         <obo:IAO_0100001>GENEPIO:0001429</obo:IAO_0100001>
-        <rdfs:label>strain taxonomy name</rdfs:label>
+        <rdfs:label>obsolete strain taxonomy name</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5050,6 +5100,17 @@ Move to &apos;sequence identifier&apos;?</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0000849 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000849">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000231>Replaced by VIDO:0001409</obo:IAO_0000231>
+        <rdfs:label>obsolete virus passage history record</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0000851 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000851">
@@ -5068,6 +5129,9 @@ Move to &apos;sequence identifier&apos;?</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000202"/>
         <obo:IAO_0000115 xml:lang="en">A sequence submitter role is a study personnel role that is repsponsible for sending sequence (DNA, RNA, Protein) data to a repository, usually GenBank.</obo:IAO_0000115>
         <obo:IAO_0000115>Suggested definition: &quot;An investigation agent role realized by a person that is responsible for submitting sequence (DNA, RNA, protein) data to a repository, usually GenBank.&quot;</obo:IAO_0000115>
+        <obo:IAO_0000116>I think this term can be obsoleted and replaced by OBI&apos;s &apos;sequence annotation reporting role&apos;. It&apos;s parent class &apos;reporting party role&apos; has the alternative term &apos;submitter&apos;. 
+
+I am not as certain as to whether the OBI term also replaces &apos;sequence annotator role&apos;. -SB [11/11/2020]</obo:IAO_0000116>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBS:rbs</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence submitter role</rdfs:label>
     </owl:Class>
@@ -5119,6 +5183,44 @@ I guess the measurement datum changes in some sense, it becomes data about a Gen
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FLU_0000864 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000864">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000254"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000000"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>An environment in which some pathogen transmission process occurs.</obo:IAO_0000115>
+        <obo:IAO_0000116>I have revised the original textual definition. 
+
+I am not sure that this should really be an environment class per se. Rather, it should be a role that environments (systems), but also enviromental zones (sites) can play under certain conditions.
+
+Either way, this class should be moved to IDO I believe. -Shane Babcock [10/28/2020]</obo:IAO_0000116>
+        <rdfs:label>transmission environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0000865 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000865">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <obo:IAO_0000115>A time measurement datum that specifies when some material was extracted from an input material.</obo:IAO_0000115>
+        <obo:IAO_0000116>This should be moved to a higher ontology. OBI? EUPATH? -SB</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119>EUPATH:0000747 (&apos;DNA extraction date&apos;)</obo:IAO_0000119>
+        <rdfs:label>extraction date</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FLU_0000867 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000867">
@@ -5128,7 +5230,8 @@ I guess the measurement datum changes in some sense, it becomes data about a Gen
         <obo:IAO_0000116>MC, 20101119: moved from quality to scalar mesurement dtum and updated defintiion accordingly</obo:IAO_0000116>
         <obo:IAO_0000116>MC, 20101119: updated label from &quot;replication titer&quot; to &quot;viral replication titer&quot;</obo:IAO_0000116>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.springerprotocols.com/Full/doi/10.1007/978-1-59745-279-3_8?encCode=REZJOjhfMy05NzItNTQ3OTUtMS04Nzk=&amp;tokenString=ycLy0AkcLqNgMccOI6y30w==</obo:IAO_0000119>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">viral replication titer</rdfs:label>
+        <obo:IAO_0000231>Replaced by VIDO:viral titer measurement datum</obo:IAO_0000231>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete viral replication titer</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5174,7 +5277,7 @@ I guess the measurement datum changes in some sense, it becomes data about a Gen
         <obo:IAO_0000115 xml:lang="en">An accession number is a quality that describes the unique identifier assigned to the entire sequence record when the record is submitted to GenBank.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.ornl.gov/sci/techresources/Human_Genome/posters/chromosome/genejargon.shtml</obo:IAO_0000119>
         <obo:IAO_0100001>OBI:GenBankID</obo:IAO_0100001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GenBank accession</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete GenBank accession</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5275,7 +5378,7 @@ Source: https://en.wikipedia.org/wiki/Bird_measurement#Head</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">A young bird confined to the nest. Nestlings are infant birds having little or no feathering. They may be pink and naked, covered with down feathers, or covered with needle-like feathers (called pin feathers).</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://elibrary.unm.edu/sora/JFO/v059n03/p0235-p0238.html</obo:IAO_0000119>
         <obo:IAO_0100001>IDOFLU:nestling stage</obo:IAO_0100001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nestling</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete nestling</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5288,10 +5391,11 @@ Source: https://en.wikipedia.org/wiki/Bird_measurement#Head</obo:IAO_0000115>
         <obo:IAO_0000116>11/9/2020 -SB
 
 Actually, perhaps this term is replaced by &apos;OBI:specimen identifier assigned by sequencing facility&apos;
+OR &apos;OBI:specimen identifier assigned by specimen repository&apos;
 
-Adding that term in case</obo:IAO_0000116>
+Adding these terms in case</obo:IAO_0000116>
         <obo:IAO_0100001>GENEPIO:0000079</obo:IAO_0100001>
-        <rdfs:label>sample name</rdfs:label>
+        <rdfs:label>obsolete sample name</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5303,6 +5407,7 @@ Adding that term in case</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
         <obo:IAO_0000115 xml:lang="en">A defined period when the sample was extracted.</obo:IAO_0000115>
         <obo:IAO_0000115>Suggested definition: &quot;Time measurement datum that specifies the time period during which the sample was extracted.&quot; -SB</obo:IAO_0000115>
+        <obo:IAO_0000116>Move to OBI. -SB</obo:IAO_0000116>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLU:MK</obo:IAO_0000119>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extraction time</rdfs:label>
     </owl:Class>
@@ -5427,7 +5532,7 @@ Reference to the fact that it is a sequence submitted to GenBank is needed to di
         <obo:IAO_0000116>MC, 20101203: updated sample to specimen</obo:IAO_0000116>
         <obo:IAO_0000119 xml:lang="en">GROUP: FLU</obo:IAO_0000119>
         <obo:IAO_0100001>EUPATH:0000608</obo:IAO_0100001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specimen collection protocol</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete specimen collection protocol</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5525,7 +5630,11 @@ The haemagglutination-inhibition assay that is routinely used for subtyping and 
         <obo:IAO_0000115>Suggested definition: &quot;An investigation agent role realized by a person who assigns a set of characteristics to a sequence for the purpose of documenting relevant information from experimental results to aid in their interpretation.&quot; -SB</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">The sequence annotator role is a study personnel role of a scientist who assigns a set of characteristics to a sequence for the purpose of documenting relevant infromation from experimental results to aid in their interpretation.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flu:ls</obo:IAO_0000119>
-        <rdfs:comment>OBI already has &apos;sequence annotation reporting role&apos;, but it concerns reporting of a sequence annotation whereas this class is about annotating itself. But I also noticed OBI:sequence annotation concerns the identifying and reporting of sequence features. So I am not sure whether they would want their class to cover both? -SB [10/20/2020]</rdfs:comment>
+        <rdfs:comment>OBI already has &apos;sequence annotation reporting role&apos;, but it concerns reporting of a sequence annotation whereas this class is about annotating itself. But I also noticed OBI:sequence annotation concerns the identifying and reporting of sequence features. So I am not sure whether they would want their class to cover both? -SB [10/20/2020]
+
+Discussion is under way as to whether this term should just be replaced by the OBI term. See: https://github.com/obi-ontology/obi/issues/1252
+
+I have imported the OBI term either way. -SB [11/11/2020]</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence annotator role</rdfs:label>
     </owl:Class>
     
@@ -5553,7 +5662,7 @@ https://www.ncbi.nlm.nih.gov/books/NBK53757/</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">A person with the lead role on the project, as a scientist or engineer.</obo:IAO_0000115>
         <obo:IAO_0000116>Replaced with the equivalently labeled OBI term. -SB</obo:IAO_0000116>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBI:0000103</obo:IAO_0000119>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Principal investigator role</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete Principal investigator role</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5579,7 +5688,7 @@ https://www.ncbi.nlm.nih.gov/books/NBK53757/</obo:IAO_0000119>
         <obo:IAO_0000116>MC, 20101207: I believe this term reflects the biochemical treatment of a sample and is therefore not equivalent to ogms: treatment which is a treatment to alleviate a disorder</obo:IAO_0000116>
         <obo:IAO_0000116>Not absolutely certain about the OBI replacement term I chose. Need to confirm. -SB [10/26/2020]</obo:IAO_0000116>
         <obo:IAO_0100001>OBI:0000073 &apos;sample preparation for assay&apos;</obo:IAO_0100001>
-        <rdfs:label xml:lang="en">treatment event</rdfs:label>
+        <rdfs:label xml:lang="en">obsolete treatment event</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5667,7 +5776,7 @@ Not sure if this is an identifier. -SB</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">A defined period when the sample was collected.</obo:IAO_0000115>
         <obo:IAO_0000116>OBI&apos;s &apos;specimen collection time measurement datum&apos; plays the same role. -SB</obo:IAO_0000116>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLU:MK</obo:IAO_0000119>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection time</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete collection time</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5693,7 +5802,7 @@ https://www.ncbi.nlm.nih.gov/genbank/samplerecord/#GInB</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000985">
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A collection quantity is a generically dependant continuant that specifies the quantity of material collected.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collection quantity</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete collection quantity</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5704,7 +5813,7 @@ https://www.ncbi.nlm.nih.gov/genbank/samplerecord/#GInB</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000987">
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000261</oboInOwl:hasDbXref>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">life stage</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete life stage</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5727,7 +5836,7 @@ https://www.ncbi.nlm.nih.gov/genbank/samplerecord/#GInB</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0000992">
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality of organism</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete quality of organism</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5792,7 +5901,18 @@ I suggest to use this label instead. I noticed that the SRA submission templates
         <obo:IAO_0000116>MC, 20101207: moved under DNA sequencing</obo:IAO_0000116>
         <obo:IAO_0000116>MC, 20101207: we can&apos;t say that the output information is about the input material</obo:IAO_0000116>
         <obo:IAO_0100001>OBI:genotyping assay</obo:IAO_0100001>
-        <rdfs:label>genomic sequencing</rdfs:label>
+        <rdfs:label>obsolete genomic sequencing</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0001005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0001005">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000231>Replaced by IDO:0001394</obo:IAO_0000231>
+        <rdfs:label>obsolete hospitalized host</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5846,7 +5966,7 @@ I suggest to use this label instead. I noticed that the SRA submission templates
         <obo:IAO_0000115 xml:lang="en">A treatment that specifies which, if any, antiviral treatment has been administered to a host.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.cdc.gov/flu/professionals/antivirals/indications.htm</obo:IAO_0000119>
         <obo:IAO_0100001>Apollo_SV:00000171</obo:IAO_0100001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antiviral treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete antiviral treatment</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5861,7 +5981,7 @@ I suggest to use this label instead. I noticed that the SRA submission templates
 
 &apos;ligated ends molecule&apos; seems to be a term for DNA molecules with sticky DNA ends generated by restriction enzymes that cut the DNA. In place of this term I have instead imported a term for sticky DNA ends, namely, &apos;dna overhang&apos;, http://purl.obolibrary.org/obo/MI_0853 from the Molecular Interactions Controlled Vocabulary? -SB [10/22/2020].</obo:IAO_0000116>
         <obo:IAO_0000116>MC, 20101118: moved under processed material and updated definition</obo:IAO_0000116>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ligated ends molecule</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete ligated ends molecule</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5874,7 +5994,7 @@ I suggest to use this label instead. I noticed that the SRA submission templates
         <obo:IAO_0000115 xml:lang="en">A bird with definitive plumage or sexually mature. Adult birds are mature, independent birds who are fully feathered for flight and capable of surviving on their own (in regards to food, shelter, etc.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.okaponds.com/tips.htm</obo:IAO_0000119>
         <obo:IAO_0100001>IDOFLU:post-juvenile adult bird stage</obo:IAO_0100001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adult</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete adult</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5888,7 +6008,7 @@ I suggest to use this label instead. I noticed that the SRA submission templates
         <obo:IAO_0000116>MC, 20101123: moved from quality of infectious disease to duration</obo:IAO_0000116>
         <obo:IAO_0000119 xml:lang="en">GROUP: FLU</obo:IAO_0000119>
         <obo:IAO_0100001>GENEPIO:symptom duration</obo:IAO_0100001>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duration of illness</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolet duration of illness</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -5899,6 +6019,9 @@ I suggest to use this label instead. I noticed that the SRA submission templates
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0001019">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMIABIS_0001046"/>
         <obo:IAO_0000115 xml:lang="en">A specimen barcode is a specimen identification number formatted as an optical machine-readable representation.</obo:IAO_0000115>
+        <obo:IAO_0000116>Alternatively, we could import &apos;specimen barcode&apos; from the Ontology of Precision Medicine and Investigation. But that term is classified as a CRID, which I am not sure is correct. Submitted an issue to discuss reclassification of the OPMI term: https://github.com/OPMI/opmi/issues/8
+
+-SB [11/11/2020]</obo:IAO_0000116>
         <obo:IAO_0000116>In FLU this was classified as a &apos;centrally registered identifier symbol.&apos; Following OBIB, I moved it to &apos;specimen ID&apos; . OBIB currently imports the FLU term. Should we just move &apos;specimen barcode&apos; to OBIB? -SB [10/4/2020]</obo:IAO_0000116>
         <obo:IAO_0000116>MC, 20101118: moved from &quot;quality of specimen&quot; under specimen identification number.</obo:IAO_0000116>
         <obo:IAO_0000117>PERSON: Melanie Courtot</obo:IAO_0000117>
@@ -5915,7 +6038,18 @@ I suggest to use this label instead. I noticed that the SRA submission templates
         <obo:IAO_0000115>A drug used specifically for treating viral infections.</obo:IAO_0000115>
         <obo:IAO_0000117>Melanie Courtot</obo:IAO_0000117>
         <obo:IAO_0100001>CHEBI:36044</obo:IAO_0100001>
-        <rdfs:label>Antiviral drug</rdfs:label>
+        <rdfs:label>obsolete antiviral drug</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FLU_0001032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FLU_0001032">
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+        <obo:IAO_0000231>Replaced by VIDO:0001413</obo:IAO_0000231>
+        <rdfs:label>obsolete virus amplification</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -10030,7 +10164,7 @@ No imports</obo:IAO_0000115>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000412>Virus which infects and replicates within or on fungi.</obo:IAO_0000412>
+        <obo:IAO_0000115>Virus which infects and replicates within or on fungi.</obo:IAO_0000115>
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/vido.owl</obo:IAO_0000412>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">mycovirus</rdfs:label>
@@ -10158,28 +10292,6 @@ Would this, and an appropriate parent class, be a good fit for the Vital Signs O
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000158 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000158">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000032"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001331"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115>Scalar measurement datum that is the measure of some viral load.</obo:IAO_0000115>
-        <obo:IAO_0000116>This is meant to replace FLU:0000867 &apos;virus replication titer&apos;--unless that was supposed to refer to something else. I couldn&apos;t find that terminology used in the literature. -SB [10/23/2020]</obo:IAO_0000116>
-        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
-        <rdfs:label>viral titer measurement datum</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IDOFLU_0000165 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000165">
@@ -10187,7 +10299,7 @@ Would this, and an appropriate parent class, be a good fit for the Vital Signs O
         <obo:IAO_0000115>A drug targeted at the influenza virus, which work by blocking the function of the viral neuraminidase protein, thus preventing the virus from reproducing by budding from the host cell.</obo:IAO_0000115>
         <obo:IAO_0000117>Melanie Courtot</obo:IAO_0000117>
         <obo:IAO_0100001>CHEBI:52425</obo:IAO_0100001>
-        <rdfs:label>neuraminidase inhibitor drug</rdfs:label>
+        <rdfs:label>obsolete neuraminidase inhibitor drug</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -11283,87 +11395,6 @@ Technically, the cited information concerns a data field, but the class defined 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000404 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000404">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VIDO_0001066"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0001032"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000112"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115>Virus aggregate, consisting of a large number of copies of one or more viruses, that is the specified output of some virus amplification.</obo:IAO_0000115>
-        <obo:IAO_0000116>I have modified the original definition, which read: &quot;An amplified virus preparation is an organimal group representing a large number of copies of one or more viruses.&quot; -SB</obo:IAO_0000116>
-        <obo:IAO_0000116>This term should be imported from VIDO.</obo:IAO_0000116>
-        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
-        <obo:IAO_0000119>R. Burke Squires</obo:IAO_0000119>
-        <rdfs:label>amplified virus preparation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000751 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000751">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/VIDO_0000508"/>
-        <obo:IAO_0000115>An influenza virus that is in its assembled state consisting of genomic material (DNA or RNA) surrounded by coating molecules.</obo:IAO_0000115>
-        <obo:IAO_0000116>I changed the textual definition to align with the VIDO definition of &apos;virion&apos;.</obo:IAO_0000116>
-        <rdfs:label>influenza virion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000754 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000754">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0302884"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000756"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Material separation to recover the virus fraction of an input material.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class is an update of the equivalently labeled FLU:0000754. It should be moved to either VIDO or OBI.</obo:IAO_0000116>
-        <obo:IAO_0000117>PERSON:Melanie Courtot</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: http://virology-online.com/general/Test1.htm</obo:IAO_0000119>
-        <rdfs:label>virus isolation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000756 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000756">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000754"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115>Virus that has been extracted from a host organism.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class replaces the equivalently labeled FLU:0000756. I am not sure whether it is correct to classify it as a virus. This class is an inferred subclass of OBI:extract.
-
-This should be moved to VIDO. We should also consider adding the term &apos;isolate&apos; to IDO Core so that it can serve as superclass for &apos;bacterial isolate&apos; and so on. -SB [10/2/2020]</obo:IAO_0000116>
-        <rdfs:label>viral isolate</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IDOFLU_0000760 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000760">
@@ -11390,27 +11421,6 @@ This should be moved to VIDO. We should also consider adding the term &apos;isol
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000767 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000767">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0042303"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Measurement datum that records the intensity of some molting cycle.</obo:IAO_0000115>
-        <obo:IAO_0000116>The &apos;molting cycle&apos; is the periodic casting off and regeneration of an outer covering of cuticle, feathers, hair, horns, skin, etc.</obo:IAO_0000116>
-        <obo:IAO_0000116>This term replaces FLU:0000767, &apos;intensity of body moult&apos;. 
-
-It should be imported from another ontology, but I haven&apos;t been to find a good home for it yet. -SB</obo:IAO_0000116>
-        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
-        <rdfs:label>molting intensity measurement</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IDOFLU_0000778 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000778">
@@ -11421,7 +11431,7 @@ Those should be outsourced towards the organization ontology.</obo:IAO_0000116>
         <obo:IAO_0000116>MC, 20101118: this is a placeholder meant to be removed when we will have a laboratory, which will allow us to define current subclass using the is_about relation</obo:IAO_0000116>
         <obo:IAO_0000116>This class is an update of FLU:000778. I have retained the FLU annotations. -Shane Babcock (10/25/2020)</obo:IAO_0000116>
         <obo:IAO_0000119>RBS:rbs</obo:IAO_0000119>
-        <rdfs:label>data about a laboratory</rdfs:label>
+        <rdfs:label>obsolete data about a laboratory</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -11464,71 +11474,6 @@ This is a placeholder class meant eventually to be ported out to an appropriate 
         <obo:IAO_0000115>Stage in a bird&apos;s life cycle that begins after the bird has fledged, during which the bird leaves the nest to practice flying and foraging, but still depends on parental care and feeding.</obo:IAO_0000115>
         <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
         <rdfs:label>fledgling stage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000812 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000812">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0002747"/>
-        <obo:IAO_0000115>Passage process that involves the incubation of a virus in a tissue culture, a developing egg, or a living organism to increase the number of the virus or to alter its characteristics.</obo:IAO_0000115>
-        <obo:IAO_0000116>This replaces FLU:0000812. I have slightly modified the definition. This term should be moved to VIDO. -SB [10/1/2020]</obo:IAO_0000116>
-        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB:http://www.merriam-webster.com/medical/passage</obo:IAO_0000119>
-        <rdfs:label>virus passage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000849 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000849">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0002748"/>
-        <obo:IAO_0000115>Passage history record that details the number of times a virus has been passaged in cell culture.</obo:IAO_0000115>
-        <obo:IAO_0000116>MC, 20111123: moved from quality of specimen to passage history record, and renamed accordingly (with addition of alt term)</obo:IAO_0000116>
-        <obo:IAO_0000116>This term replaced FLU:0000849. It should be moved to VIDO. -SB</obo:IAO_0000116>
-        <obo:IAO_0000118>virus passage number</obo:IAO_0000118>
-        <obo:IAO_0000119>URL:http://www.pnas.org/cgi/content/abstract/97/13/6974</obo:IAO_0000119>
-        <rdfs:label>virus passage history record</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000864 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000864">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000254"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TRANS_0000000"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115>An environment in which some pathogen transmission process occurs.</obo:IAO_0000115>
-        <obo:IAO_0000116>This is an updated version of FLU:0000864. I have revised the original textual definition. 
-
-I am not sure that this should really be an environment class per se. Rather, it should be a role that environments (systems), but also enviromental zones (sites) can play under certain conditions.
-
-Either way, this class should be moved to IDO I believe. -Shane Babcock [10/28/2020]</obo:IAO_0000116>
-        <rdfs:label>transmission environment</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0000865 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0000865">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <obo:IAO_0000115>A time measurement datum that specifies when some material was extracted from an input material.</obo:IAO_0000115>
-        <obo:IAO_0000116>This replaces the equivalently labeled FLU:0000865. It should be moved to a higher ontology. OBI? EUPATH? -SB</obo:IAO_0000116>
-        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
-        <obo:IAO_0000119>EUPATH:0000747 (&apos;DNA extraction date&apos;)</obo:IAO_0000119>
-        <rdfs:label>extraction date</rdfs:label>
     </owl:Class>
     
 
@@ -11598,32 +11543,8 @@ This is a placeholder class eventually meant to be ported out to an appropriate 
 Moved from &apos;data about a laboratory&apos; to &apos;identifier&apos;.
 Needs to be sent to another ontology, OBI? -SB [9/18/2020]</obo:IAO_0000116>
         <obo:IAO_0100001>NCIT:C93857</obo:IAO_0100001>
-        <rdfs:label>laboratory name</rdfs:label>
+        <rdfs:label>obsolete laboratory name</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0001005 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0001005">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0000531"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000098"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115>Host that has been hospitalized.</obo:IAO_0000115>
-        <obo:IAO_0000116>This class replaces the equivalently labeled FLU:0001005. That version&apos;s textual definition was needlessly complicated. Also, I have changed the original OWL definition that defined a hospitalized host as the output of hospitalization. A hospitalized host is not an output, it is an organism that participates in hospitalization. 
-
-This class should be moved to a higher ontology, perhaps IDO Core -SB [10/2/2020]</obo:IAO_0000116>
-        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
-        <rdfs:label>hospitalized host</rdfs:label>
     </owl:Class>
     
 
@@ -11677,31 +11598,11 @@ I am not sure exactly what do with these classes.</obo:OBI_0001847>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>A plastic or metal ring, usually attached to the ankle of a bird, which bears a bird band identification number.</obo:IAO_0000115>
         <obo:IAO_0000116>Should be moved to an external ontology and imported. -SB</obo:IAO_0000116>
         <obo:IAO_0000116>Slightly reworded the textual definition and reassigned as a subclass of material information bearer. -SB</obo:IAO_0000116>
         <obo:IAO_0000117>MC, 20101201: added as bearer of band identification number as per Burke&apos;s email at http://groups.google.com/group/influenza-ontology/msg/8781d389ec670463?hl=en</obo:IAO_0000117>
         <rdfs:label>bird identification band</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IDOFLU_0001032 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDOFLU_0001032">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000094"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0100051"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Material processing with the objective of increasing the number of viruses in a specimen.</obo:IAO_0000115>
-        <obo:IAO_0000116>I slightly edited the textual definition. -SB</obo:IAO_0000116>
-        <obo:IAO_0000116>Should be imported from VIDO. -SB</obo:IAO_0000116>
-        <obo:IAO_0000117>Melanie Courtot</obo:IAO_0000117>
-        <rdfs:label>virus amplification</rdfs:label>
     </owl:Class>
     
 
@@ -13658,7 +13559,7 @@ I am not sure exactly what do with these classes.</obo:OBI_0001847>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 xml:lang="en">Disorder that is part of an extended organism and has some infectious pathogen as part, which participates in the formation of the disorder.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Disorder that is part of an extended organism which has an infectious pathogen part, that exists as a result of a process of formation of disorder initiated by the infectious pathogen.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
@@ -15057,7 +14958,7 @@ This should be pushed to an upper-level ontology.</obo:IAO_0000412>
         </owl:equivalentClass>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/IDO_0000617"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
-        <obo:IAO_0000115 xml:lang="en">Material entity part of an organism&apos;s extended organism that has some pathogen as part, which participates in the formation of the material entity by infecting the organism.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Material entity part of an extended organism that has some pathogen as part, which participates in the formation of the material entity by infecting the organism.</obo:IAO_0000115>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000117>Alexander Diehl</obo:IAO_0000117>
         <obo:IAO_0000117>Lindsay Cowell</obo:IAO_0000117>
@@ -17702,6 +17603,28 @@ This should be pushed to an upper-level ontology.</obo:IAO_0000412>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IDO_0001394 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0001394">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0000531"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000098"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Host that has been hospitalized.</obo:IAO_0000115>
+        <obo:IAO_0000116>This is an updated version of the deprecated FLU:0001005</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <rdfs:label>hospitalized host</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IDO_0100533 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IDO_0100533">
@@ -17892,7 +17815,7 @@ This should be pushed to an upper-level ontology.</obo:IAO_0000412>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
         <obo:IAO_0000112>Human Immunodeficiency Virus</obo:IAO_0000112>
         <obo:IAO_0000115>Virus with genetic material encoded in single-stranded RNA that replicates using reverse transcriptase to convert positive-sense RNA to DNA.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/NCBITaxon_2169561</obo:IAO_0000412>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>Baltimore Classification Group VI</oboInOwl:hasExactSynonym>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">single-stranded RNA retrovirus</rdfs:label>
@@ -17906,7 +17829,7 @@ This should be pushed to an upper-level ontology.</obo:IAO_0000412>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
         <obo:IAO_0000112>Parvovirus</obo:IAO_0000112>
         <obo:IAO_0000115>Virus with genetic material encoded in single-stranded DNA and replicates using DNA polymerase.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/NCBITaxon_2731342</obo:IAO_0000412>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>Baltimore Classification Group II</oboInOwl:hasExactSynonym>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">single-stranded DNA virus</rdfs:label>
@@ -17931,7 +17854,7 @@ This should be pushed to an upper-level ontology.</obo:IAO_0000412>
         <obo:IAO_0000112>Adenovirus</obo:IAO_0000112>
         <obo:IAO_0000112>Poxvirus</obo:IAO_0000112>
         <obo:IAO_0000115>Virus that has its genetic material encoded in double-stranded DNA and replicates using DNA polymerase.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/NCBITaxon_35237</obo:IAO_0000412>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>Baltimore Classification Group I</oboInOwl:hasExactSynonym>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">double-stranded DNA virus</rdfs:label>
@@ -17945,7 +17868,7 @@ This should be pushed to an upper-level ontology.</obo:IAO_0000412>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
         <obo:IAO_0000112>Hepatitus B Virus</obo:IAO_0000112>
         <obo:IAO_0000115>Virus with genetic material that is encoded in double-stranded DNA and replicates through single-stranded RNA intermediate.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/NCBITaxon_35268</obo:IAO_0000412>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>Baltimore Classification Group VII</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Pararetrovirus</oboInOwl:hasExactSynonym>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
@@ -17961,7 +17884,7 @@ This should be pushed to an upper-level ontology.</obo:IAO_0000412>
         <obo:IAO_0000112>Coronavirus</obo:IAO_0000112>
         <obo:IAO_0000112>Picornavirus</obo:IAO_0000112>
         <obo:IAO_0000115>Virus with genetic material encoded in single-stranded RNA that can be translated directly into proteins.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/NCBITaxon_35278</obo:IAO_0000412>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>Baltimore Classification Group IV</oboInOwl:hasExactSynonym>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">positive-sense single-stranded RNA virus</rdfs:label>
@@ -17975,7 +17898,7 @@ This should be pushed to an upper-level ontology.</obo:IAO_0000412>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
         <obo:IAO_0000112>Rhabdovirus</obo:IAO_0000112>
         <obo:IAO_0000115>Virus with genetic material encoded in single-stranded RNA that can be translated into proteins only after transcription by RNA polymerase.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/NCBITaxon_35301</obo:IAO_0000412>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>Baltimore Classification Group V</oboInOwl:hasExactSynonym>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">negative-sense single-stranded RNA virus</rdfs:label>
@@ -17999,7 +17922,7 @@ This should be pushed to an upper-level ontology.</obo:IAO_0000412>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
         <obo:IAO_0000112>Reovirus</obo:IAO_0000112>
         <obo:IAO_0000115>Virus with genetic material encoded in double-stranded RNA.</obo:IAO_0000115>
-        <obo:IAO_0000412>http://purl.obolibrary.org/obo/NCBITaxon_35325</obo:IAO_0000412>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>Baltimore Classification Group III</oboInOwl:hasExactSynonym>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">double-stranded RNA virus</rdfs:label>
@@ -18314,6 +18237,25 @@ editor = PRS</obo:IAO_0000232>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBI</obo:IAO_0000119>
         <obo:IAO_0000232 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feb 10, 2009.  changes after discussion at OBI Consortium Workshop Feb 2-6, 2009.  accepted as core term.</obo:IAO_0000232>
         <rdfs:label xml:lang="en">evaluant role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000202"/>
+        <obo:IAO_0000111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reporting party role</obo:IAO_0000111>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person who prepares microarray data in MAGE-TAB format and submits to a database, such as ArrayExpress.</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">The first section has been pre-designated as the &apos;Reporting Party&apos; section and should be filled with the Reporting Party&apos;s personal information.  http://www.mercedsheriff.com/SelfReporting.htm</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">a study personnel role played by a party who reports the outcome of a study component</obo:IAO_0000115>
+        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MO:submitter mapped to this term. So, alternative term &apos;submitter&apos; was added.</obo:IAO_0000116>
+        <obo:IAO_0000117 xml:lang="en">Jennifer Fostel</obo:IAO_0000117>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reporting party</obo:IAO_0000118>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">submitter</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">OBI</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">reporting party role</rdfs:label>
     </owl:Class>
     
 
@@ -20616,6 +20558,34 @@ pat1-114/pat1-114 ade6-M210/ade6-M216 h+/h+ (cells are diploid)</obo:IAO_0000232
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0001515 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001515">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001528"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000107"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000838"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001528"/>
+        <obo:IAO_0000111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">material maintenance service</obo:IAO_0000111>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">model organism colony maintanance</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A material processing service in which a service provider makes physical modifications to a specified input material, such that at least one of the specified outputs of this process is a modified version of a specified input material.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSON: Carlo Torniai</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSON: Matthew Brush</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSON: Matthew Brush</obo:IAO_0000119>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Here we need to go back to the defintoin of storage process. It has object specification which is material maintenance. Not necessareley a material maintenance is needed in a storage process. </rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">material maintenance service</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0001528 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001528">
@@ -20681,6 +20651,33 @@ pat1-114/pat1-114 ade6-M210/ade6-M216 h+/h+ (cells are diploid)</obo:IAO_0000232
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSON: Matthew Brush</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">material analysis service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001557 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001557">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001528"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000107"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0302893"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001515"/>
+        <obo:IAO_0000111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">material storage service</obo:IAO_0000111>
+        <obo:IAO_0000112 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A service that offers liquid nitrogen stroage.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A storage service in which a service consumer provides some material as input which a service provider stores and returns as output.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSON: Carlo Torniai</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSON: Matthew Brush</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PERSON: Matthew Brush</obo:IAO_0000119>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">material storage service</rdfs:label>
     </owl:Class>
     
 
@@ -20922,6 +20919,53 @@ is realized in a specimen collection process.</obo:IAO_0000115>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0001885 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001885">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000245"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000947"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000054"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001557"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0100051"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
+        <obo:IAO_0000111 xml:lang="en">specimen repository organization</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115>An organization that provides a service to store and distribute specimens</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON: Chris Stoeckert, Jie Zheng</obo:IAO_0000117>
+        <obo:IAO_0000119>NIAID GSCID-BRC metadata working group</obo:IAO_0000119>
+        <obo:OBI_0001886>Specimen Repository</obo:OBI_0001886>
+        <dc:source>NIAID GSCID-BRC</dc:source>
+        <rdfs:label xml:lang="en">specimen repository organization</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0001891 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001891">
@@ -20956,6 +21000,44 @@ is realized in a specimen collection process.</obo:IAO_0000115>
         <obo:OBI_0001886>Sequencing Facility</obo:OBI_0001886>
         <dc:source>NIAID GSCID-BRC</dc:source>
         <rdfs:label xml:lang="en">sequencing facility organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001900 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001900">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0001616"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000574"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001885"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001616"/>
+        <obo:IAO_0000111 xml:lang="en">specimen identifier assigned by specimen repository</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115>A specimen identifier which is assigned by a specimen repository</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON: Chris Stoeckert, Jie Zheng</obo:IAO_0000117>
+        <obo:IAO_0000119>NIAID GSCID-BRC metadata working group</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <obo:OBI_0001886>Specimen Repository Sample ID</obo:OBI_0001886>
+        <dc:source>NIAID GSCID-BRC</dc:source>
+        <rdfs:label xml:lang="en">specimen identifier assigned by specimen repository</rdfs:label>
     </owl:Class>
     
 
@@ -21145,6 +21227,22 @@ The following are NOT conclusions based on data: data themselves; results from p
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <dc:source>NIAID GSCID-BRC</dc:source>
         <rdfs:label xml:lang="en">sequence annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0001949 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001949">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000068"/>
+        <obo:IAO_0000111 xml:lang="en">sequence annotation reporting role</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115>A reporting party role that is realized by a person or organization who reports the feature annotation results from the analysis of a macromolecular sequence.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON: Jie Zheng, Chris Stoeckert</obo:IAO_0000117>
+        <obo:IAO_0000119>NIAID GSCID-BRC metadata working group</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <dc:source>NIAID GSCID-BRC</dc:source>
+        <rdfs:label xml:lang="en">sequence annotation reporting role</rdfs:label>
     </owl:Class>
     
 
@@ -21470,6 +21568,33 @@ A cultured cell population maintained in vitro: &quot;Rat cortical neurons from 
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philippe Rocca-Serra</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label xml:lang="en">extraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0302893 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0302893">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000838"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000806"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">storage</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">PMID: 18550121.Total Prostate Specific Antigen Stability Confirmed After Long-Term Storage of Serum at -80C. J Urol. 2008 Jun 10.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A maintenance process by which material entities that are not actively metabolizing are placed in well identified location and possibly under controlled environment in ad-hoc devices/structures in order to preserve and protect them from decay/alteration and maintain availability</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBI-Branch</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">storage</rdfs:label>
     </owl:Class>
     
 
@@ -22694,7 +22819,7 @@ See: https://github.com/obi-ontology/obi/issues/1246</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000751"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FLU_0000751"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -22754,7 +22879,7 @@ See: https://github.com/obi-ontology/obi/issues/1246</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDOFLU_0000751"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FLU_0000751"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -23319,6 +23444,34 @@ adipose</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A unit which is a standard measure of the dimension in which events occur in sequence.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/VIDOFLU_0001411 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIDOFLU_0001411">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/VIDO_0001066"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001413"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000112"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Virus aggregate, consisting of a large number of copies of one or more viruses, that is the specified output of some virus amplification.</obo:IAO_0000115>
+        <obo:IAO_0000116>I have modified the original definition, which read: &quot;An amplified virus preparation is an organimal group representing a large number of copies of one or more viruses.&quot; -SB</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119>R. Burke Squires</obo:IAO_0000119>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/vido.owl"/>
+        <rdfs:label>amplified virus preparation</rdfs:label>
     </owl:Class>
     
 
@@ -23896,8 +24049,8 @@ adipose</oboInOwl:hasRelatedSynonym>
             </owl:Class>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Virus which infects and replicates within or on bacteria or archea.</obo:IAO_0000115>
-        <obo:IAO_0000115>http://purl.obolibrary.org/obo/vido.owl</obo:IAO_0000115>
         <obo:IAO_0000116>This is an inferred subclass of pathogen.</obo:IAO_0000116>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/vido.owl</obo:IAO_0000412>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">bacteriophage</rdfs:label>
     </owl:Class>
@@ -24261,6 +24414,173 @@ adipose</oboInOwl:hasRelatedSynonym>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/VIDO_0001406 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIDO_0001406">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001412"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">Time measurement datum specifying the date that the virus passage(s) took place.</obo:IAO_0000115>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLU:MK</obo:IAO_0000119>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/vido.owl</obo:IAO_0000412>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virus passage date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/VIDO_0001407 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIDO_0001407">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000032"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001331"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Scalar measurement datum that is the measure of some viral load.</obo:IAO_0000115>
+        <obo:IAO_0000116>This is meant to replace FLU:0000867 &apos;virus replication titer&apos;--unless that was supposed to refer to something else. I couldn&apos;t find that terminology used in the literature. -SB [10/23/2020]</obo:IAO_0000116>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/vido.owl</obo:IAO_0000412>
+        <rdfs:label>viral titer measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/VIDO_0001408 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIDO_0001408">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000032"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000450"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001412"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A scalar measurement datum denoting the pathogenicity of a virus after several passages in cell culture.</obo:IAO_0000115>
+        <obo:IAO_0000116>MC, 20101119: moved from quality of specimen to scalar measurement datum</obo:IAO_0000116>
+        <obo:IAO_0000116>MC, 20101201: updated definition and label</obo:IAO_0000116>
+        <obo:IAO_0000117>FLU:Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117>VIDO:Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000118 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virus passage level</obo:IAO_0000118>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://www.pnas.org/cgi/content/abstract/97/13/6974</obo:IAO_0000119>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/vido.owl</obo:IAO_0000412>
+        <rdfs:label>virus pathogenicity after passage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/VIDO_0001409 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIDO_0001409">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0002748"/>
+        <obo:IAO_0000115>Passage history record that details the number of times a virus has been passaged in cell culture.</obo:IAO_0000115>
+        <obo:IAO_0000116>MC, 20111123: moved from quality of specimen to passage history record, and renamed accordingly (with addition of alt term)</obo:IAO_0000116>
+        <obo:IAO_0000117>FLU:Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117>VIDO:Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000118>virus passage number</obo:IAO_0000118>
+        <obo:IAO_0000119>URL:http://www.pnas.org/cgi/content/abstract/97/13/6974</obo:IAO_0000119>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/vido.owl</obo:IAO_0000412>
+        <rdfs:label>virus passage history record</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/VIDO_0001410 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIDO_0001410">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10239"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001414"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115>Virus that has been extracted from a host organism.</obo:IAO_0000115>
+        <obo:IAO_0000116>I am not sure whether it is correct to classify it as a virus. This class is an inferred subclass of OBI:extract. -SB [10/2/2020]</obo:IAO_0000116>
+        <obo:IAO_0000119>FLU Group</obo:IAO_0000119>
+        <rdfs:label>viral isolate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/VIDO_0001412 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIDO_0001412">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0002747"/>
+        <obo:IAO_0000115>Passage process that involves the incubation of a virus in a tissue culture, a developing egg, or a living organism to increase the number of the virus or to alter its characteristics.</obo:IAO_0000115>
+        <obo:IAO_0000116>I have slightly modified the definition. Replaces FLU:0000812 -SB [10/1/2020]</obo:IAO_0000116>
+        <obo:IAO_0000117>Group:FLU</obo:IAO_0000117>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB:http://www.merriam-webster.com/medical/passage</obo:IAO_0000119>
+        <rdfs:label>virus passage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/VIDO_0001413 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIDO_0001413">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000094"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0100051"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Material processing with the objective of increasing the number of viruses in a specimen.</obo:IAO_0000115>
+        <obo:IAO_0000116>I slightly edited the textual definition. -SB</obo:IAO_0000116>
+        <obo:IAO_0000117>Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/vido.owl</obo:IAO_0000412>
+        <rdfs:label>virus amplification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/VIDO_0001414 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/VIDO_0001414">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0302884"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/VIDO_0001410"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Material separation to recover the virus fraction of an input material.</obo:IAO_0000115>
+        <obo:IAO_0000117>PERSON:Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117>Shane Babcock</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB: http://virology-online.com/general/Test1.htm</obo:IAO_0000119>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/vido.owl</obo:IAO_0000412>
+        <rdfs:label>virus isolation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/VO_0001374 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/VO_0001374">
@@ -24491,7 +24811,7 @@ adipose</oboInOwl:hasRelatedSynonym>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115>Pathogenic disposition borne by a pathogen to be transmitted to a host and become part of an infection in that host or immunocompetent members of the same species as the host.</obo:IAO_0000115>
+        <obo:IAO_0000115>Pathogenic disposition borne by a pathogen to be transmitted to a host and then become part of an infection in that host or immunocompetent members of the same species as the host.</obo:IAO_0000115>
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/ido.owl</obo:IAO_0000412>
         <oboInOwl:term_editor>John Beverley</oboInOwl:term_editor>
         <rdfs:label xml:lang="en">infectious disposition</rdfs:label>
