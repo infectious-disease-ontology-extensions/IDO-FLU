@@ -6,7 +6,7 @@ Developed by Richard Scheuermann, Lynn Schriml, Joane Luciano, Burke Squires, Me
 IDO-FLU has been applied to databases such as the Influenza Research Database: https://www.fludb.org/brc/home.spg?decorator=influenza
 as well as the Virus Pathogen Database and Analysis Resource (ViPR): https://www.viprbrc.org/brc/home.spg?decorator=vipr 
 
-IDOFLU is currently in the process of being updated and reengineered as an extension of the Virus Infectious Disease Ontology.
+IDOFLU is currently in the process of being updated and reengineered as an extension of the Virus Infectious Disease Ontology by Shane Babcock, in consultation with Burke Squires and Melanie Courtot.
 
 Documentation:
 
